@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messina Home | Bursa İnegöl Koltuk Mağazası</title>
+<meta name="description" content="Messina Home — Bursa İnegöl'de konfor ve zarafeti bir araya getiren koltuk ve oturma grubu mağazası.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23ffffff' stroke='%23a9825a' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23a9825a' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Messina <span>Home</span></span>
+      <span class="brand-tag">İnegöl · Bursa</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Ana Sayfa</a></li>
+      <li class="has-dropdown">
+        <a href="urunler.html">Ürünler
+          <svg class="dropdown-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="urunler.html#kose-koltuk">Köşe Koltuk Grubu</a>
+          <a href="urunler.html#kanepe">Kanepe / Üçlü Koltuk</a>
+          <a href="urunler.html#berjer">Berjer Koltuk</a>
+          <a href="urunler.html#cekyat">Yatak Koltuk (Çekyat)</a>
+          <a href="urunler.html#sandalye-puf">Sandalye & Puf</a>
+          <a href="urunler.html#ozel-tasarim">Özel Tasarım</a>
+        </div>
+      </li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="iletisim.html" class="btn btn--outline">İletişim</a>
+      <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="btn btn--whatsapp">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO — Saloni Mobilya Referanslı Lüks Video & Canlı Karşılama -->
+  <section class="hero-full hero-video-wrap" id="hero-section">
+    <!-- Arka Plan HTML5 Video (Otomatik Oynatma & Sessiz) -->
+    <div class="hero-video-container">
+      <video id="hero-bg-video" class="hero-video-element" autoplay muted loop playsinline poster="images/hero-1.jpg">
+        <source src="videos/hero-video.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Video yüklenene kadar veya video desteği yoksa çalışan lüks görsel slider -->
+      <div class="hero-slider" id="hero-slider-fallback">
+        <div class="hero-slide active">
+          <img src="images/hero-1.jpg" alt="Messina Home Modern Modüler Koltuk" fetchpriority="high">
+        </div>
+        <div class="hero-slide">
+          <img src="images/hero-2.jpg" alt="Messina Home Kavisli Bouclé Salon Takımı">
+        </div>
+        <div class="hero-slide">
+          <img src="images/hero-3.jpg" alt="Messina Home Özel Tasarım Köşe Koltuk">
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+      <div class="hero-live-badge">
+        <span class="live-dot"></span>
+        <span class="live-text">Canlı Showroom & Video · İnegöl / Bursa</span>
+        <span class="live-tag">2026 Tasarım Koleksiyonu</span>
+      </div>
+
+      <h1>Konfor ve Zarafetin Sanata Dönüştüğü Yer</h1>
+      <p class="lead">Saloni çizgilerini aratmayan modern estetik; İnegöl'ün usta el işçiliği ve birinci sınıf dokuma kumaşlarıyla yaşam alanlarınıza lüks ve zamansız bir atmosfer katıyor.</p>
+      
+      <div class="hero-actions">
+        <a href="urunler.html" class="btn btn--gold">
+          <span>Koleksiyonu Keşfet</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Saloni%20tarz%C4%B1%20koltuk%20modelleriniz%20ve%20fiyatlar%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--glass">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+          <span>WhatsApp ile Fiyat & Katalog Al</span>
+        </a>
+      </div>
+
+      <!-- Hero Alt Bar — Saloni Tarzı Video ve Slider Kontrolleri -->
+      <div class="hero-bottom-bar">
+        <div class="hero-indicators">
+          <button class="hero-dot active" data-slide="0" aria-label="Slayt 1: Modüler Koltuk">
+            <span class="dot-num">01</span>
+            <span class="dot-label">Modüler Koltuk</span>
+            <span class="dot-progress"></span>
+          </button>
+          <button class="hero-dot" data-slide="1" aria-label="Slayt 2: Kavisli Salon">
+            <span class="dot-num">02</span>
+            <span class="dot-label">Kavisli Salon</span>
+            <span class="dot-progress"></span>
+          </button>
+          <button class="hero-dot" data-slide="2" aria-label="Slayt 3: Köşe Grubu">
+            <span class="dot-num">03</span>
+            <span class="dot-label">Köşe Grubu</span>
+            <span class="dot-progress"></span>
+          </button>
+        </div>
+
+        <!-- Video Kontrol Butonları (Oynat/Durdur & Ses) -->
+        <div class="hero-video-controls">
+          <button class="hero-ctrl-btn" id="hero-play-toggle" aria-label="Videoyu Durdur/Oynat" title="Videoyu Durdur/Oynat">
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span class="ctrl-label">Durdur</span>
+          </button>
+
+          <button class="hero-ctrl-btn" id="hero-mute-toggle" aria-label="Sesi Aç/Kapat" title="Sesi Aç/Kapat">
+            <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            <span class="ctrl-label">Ses Aç</span>
+          </button>
+        </div>
+
+        <div class="hero-nav-arrows">
+          <button class="hero-arrow-btn" id="hero-prev" aria-label="Önceki Görsel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="hero-arrow-btn" id="hero-next" aria-label="Sonraki Görsel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saloni Tarzı Aşağı Kaydır Göstergesi -->
+    <a href="#koleksiyon-baslangic" class="hero-scroll-hint" aria-label="Aşağı kaydırın">
+      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+      <span class="scroll-text">Keşfetmek İçin Kaydırın</span>
+    </a>
+  </section>
+
+  <div id="koleksiyon-baslangic"></div>
+
+  <!-- HIZLI GÜVEN & AVANTAJ ŞERİDİ -->
+  <section class="hero-features-strip">
+    <div class="container">
+      <div class="features-strip-grid">
+        <div class="strip-item">
+          <div class="strip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>İnegöl Üretici Güvencesi</strong>
+            <span>Doğrudan atölyeden birinci sınıf malzeme</span>
+          </div>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div>
+            <strong>Kişiye Özel Ölçü & Kumaş</strong>
+            <span>Mekanınıza göre sınırsız renk ve doku</span>
+          </div>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div>
+            <strong>Türkiye Geneli Teslimat</strong>
+            <span>Güvenli paketleme ve eve teslim kurulum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KARUSEL — Öne Çıkan Kategoriler -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="eyebrow">Koleksiyon</span>
+          <h2>Öne Çıkan Kategoriler</h2>
+        </div>
+        <div class="carousel-controls">
+          <button class="car-btn" data-dir="-1" data-target="featured-carousel" aria-label="Önceki">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="car-btn" data-dir="1" data-target="featured-carousel" aria-label="Sonraki">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel container" id="featured-carousel">
+      <div class="carousel-track">
+
+        <article class="car-card reveal">
+          <div class="placeholder-img">
+            <img src="images/cat-kose-koltuk.jpg" alt="Köşe Koltuk Grubu" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Köşe Koltuk Grubu</h3>
+            <a href="urunler.html#kose-koltuk" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="car-card reveal reveal-delay-1">
+          <div class="placeholder-img">
+            <img src="images/cat-kanepe.jpg" alt="Kanepe / Üçlü Koltuk" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Kanepe / Üçlü Koltuk</h3>
+            <a href="urunler.html#kanepe" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="car-card reveal reveal-delay-2">
+          <div class="placeholder-img">
+            <img src="images/cat-berjer.jpg" alt="Berjer Koltuk" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Berjer Koltuk</h3>
+            <a href="urunler.html#berjer" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="car-card reveal">
+          <div class="placeholder-img">
+            <img src="images/cat-cekyat.jpg" alt="Yatak Koltuk (Çekyat)" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Yatak Koltuk</h3>
+            <a href="urunler.html#cekyat" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="car-card reveal reveal-delay-1">
+          <div class="placeholder-img">
+            <img src="images/cat-sandalye-puf.jpg" alt="Sandalye & Puf" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Sandalye & Puf</h3>
+            <a href="urunler.html#sandalye-puf" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="car-card reveal reveal-delay-2">
+          <div class="placeholder-img">
+            <img src="images/cat-ozel-tasarim.jpg" alt="Özel Tasarım Koltuk" loading="lazy">
+            <span class="ph-label">Temsili Görsel</span>
+          </div>
+          <div style="padding-top:16px">
+            <h3 style="font-size:1.1rem;margin-bottom:6px">Özel Tasarım</h3>
+            <a href="urunler.html#ozel-tasarim" class="link-arrow">Keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDİTORYAL VİTRİN — büyük format -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Yakından Tanıyın</span>
+        <h2>Mağazamızda Sizi Neler Bekliyor</h2>
+      </div>
+
+      <div class="showcase">
+        <a href="hakkimizda.html" class="showcase-tile reveal">
+          <div class="hero-media">
+            <img src="images/showcase-magaza.jpg" alt="Messina Home mağazası" loading="lazy">
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="showcase-text">
+            <span class="eyebrow">Mağazamız</span>
+            <h3>İnegöl'deki Showroom'umuzu Ziyaret Edin</h3>
+            <span class="link-arrow link-arrow--light">Konum & İletişim <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20%C3%B6zel%20tasar%C4%B1m%20koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="showcase-tile reveal reveal-delay-1">
+          <div class="hero-media">
+            <img src="images/showcase-ozel-tasarim.jpg" alt="Özel tasarım koltuk hizmeti" loading="lazy">
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="showcase-text">
+            <span class="eyebrow">Özel Tasarım</span>
+            <h3>Ölçünüze ve Zevkinize Uygun Koltuk Çözümleri</h3>
+            <span class="link-arrow link-arrow--light">WhatsApp'tan Sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEDEN BİZ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Neden Messina Home</span>
+        <h2>Kalite ve Güveni Bir Arada Sunuyoruz</h2>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="feature reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+          </div>
+          <h3>Kaliteli Malzeme</h3>
+          <p>Dayanıklı kumaş ve iskelet yapılarla üretilen koltuklar.</p>
+        </div>
+        <div class="feature reveal reveal-delay-1">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12l2-2 4 4 10-10 2 2-12 12z"/></svg>
+          </div>
+          <h3>Özenli Seçki</h3>
+          <p>Her modelde konfor ve estetiği bir arada gözetiyoruz.</p>
+        </div>
+        <div class="feature reveal reveal-delay-2">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l3-9 12-9 3 3-9 12-9 3z"/></svg>
+          </div>
+          <h3>Bursa İnegöl'de</h3>
+          <p>Yerel ve ulaşılabilir; ürünleri yerinde inceleyebilirsiniz.</p>
+        </div>
+        <div class="feature reveal reveal-delay-3">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3>Kolay İletişim</h3>
+          <p>WhatsApp üzerinden hızlıca bilgi alıp sipariş verebilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow">Bize Ulaşın</span>
+      <h2>Hayalinizdeki Koltuğu Birlikte Bulalım</h2>
+      <p style="max-width:520px;margin:0 auto">Sorularınız için WhatsApp üzerinden yazabilir ya da mağazamızı ziyaret edebilirsiniz.</p>
+      <div class="btn-row">
+        <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="btn btn--whatsapp">WhatsApp'tan Yazın</a>
+        <a href="iletisim.html" class="btn btn--outline">İletişim Bilgileri</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name" style="font-size:1.3rem">Messina <span style="color:var(--gold)">Home</span></span>
+        <p style="margin-top:14px">Bursa İnegöl'de konfor ve zarafeti bir araya getiren koltuk mağazası.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/messinahome" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://wa.me/905050332457" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32" fill="currentColor" style="width:17px;height:17px"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Hızlı Bağlantılar</h4>
+        <div class="footer-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="urunler.html">Ürünler</a>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="iletisim.html">İletişim</a>
+        </div>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <div class="footer-links">
+          <a href="tel:+905050332457">0505 033 24 57</a>
+          <a href="https://wa.me/905050332457" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+          <span>İnegöl, Bursa</span>
+          <span>Her gün 09:00 – 18:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year">2026</span> Messina Home — Tüm hakları saklıdır.
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp'tan yazın">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
