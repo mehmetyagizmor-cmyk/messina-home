@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23161519' stroke='%23d4af37' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23d4af37' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
     <div class="nav-cta">
       <a href="iletisim.html" class="btn btn--outline">İletişim</a>
       <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="btn btn--whatsapp">
-        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
         WhatsApp
       </a>
     </div>
@@ -55,138 +55,195 @@
 
 <main>
 
-  <!-- HERO — Saloni Mobilya Referanslı Lüks Video & Canlı Karşılama -->
-  <section class="hero-full hero-video-wrap" id="hero-section">
+  <!-- 1. HERO — Tam Ekran Sinematik Video (Showroom & Yaşam Alanı Turu) -->
+  <section class="hero-full-clean" id="hero-section">
     <!-- Arka Plan HTML5 Video (Otomatik Oynatma & Sessiz) -->
     <div class="hero-video-container">
       <video id="hero-bg-video" class="hero-video-element" autoplay muted loop playsinline poster="images/hero-1.jpg">
-        <source src="videos/hero-video.mp4" type="video/mp4">
+        <source src="videos/showroom-video.mp4" type="video/mp4">
       </video>
       
-      <!-- Video yüklenene kadar veya video desteği yoksa çalışan lüks görsel slider -->
+      <!-- Video desteği yoksa çalışan görsel yedeği -->
       <div class="hero-slider" id="hero-slider-fallback">
         <div class="hero-slide active">
           <img src="images/hero-1.jpg" alt="Messina Home Modern Modüler Koltuk" fetchpriority="high">
         </div>
-        <div class="hero-slide">
-          <img src="images/hero-2.jpg" alt="Messina Home Kavisli Bouclé Salon Takımı">
-        </div>
-        <div class="hero-slide">
-          <img src="images/hero-3.jpg" alt="Messina Home Özel Tasarım Köşe Koltuk">
-        </div>
       </div>
     </div>
     
-    <div class="hero-overlay"></div>
+    <div class="hero-subtle-overlay"></div>
 
-    <div class="hero-content container">
-      <div class="hero-live-badge">
+    <!-- Üst İnce Durum Rozeti -->
+    <div class="hero-clean-top container">
+      <div class="hero-clean-tag">
         <span class="live-dot"></span>
-        <span class="live-text">Canlı Showroom & Video · İnegöl / Bursa</span>
-        <span class="live-tag">2026 Tasarım Koleksiyonu</span>
-      </div>
-
-      <h1>Konfor ve Zarafetin <span class="italic-serif gold-text">Sanata</span> Dönüştüğü Yer</h1>
-      <p class="lead">Saloni çizgilerini aratmayan modern estetik; İnegöl'ün usta el işçiliği ve birinci sınıf dokuma kumaşlarıyla yaşam alanlarınıza lüks ve zamansız bir atmosfer katıyor.</p>
-      
-      <div class="hero-actions">
-        <a href="urunler.html" class="btn btn--gold">
-          <span>Koleksiyonu Keşfet</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Saloni%20tarz%C4%B1%20koltuk%20modelleriniz%20ve%20fiyatlar%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--glass">
-          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
-          <span>WhatsApp ile Fiyat & Katalog Al</span>
-        </a>
-      </div>
-
-      <!-- Hero Alt Bar — Saloni Tarzı Video ve Slider Kontrolleri -->
-      <div class="hero-bottom-bar">
-        <div class="hero-indicators">
-          <button class="hero-dot active" data-slide="0" aria-label="Slayt 1: Modüler Koltuk">
-            <span class="dot-num">01</span>
-            <span class="dot-label">Modüler Koltuk</span>
-            <span class="dot-progress"></span>
-          </button>
-          <button class="hero-dot" data-slide="1" aria-label="Slayt 2: Kavisli Salon">
-            <span class="dot-num">02</span>
-            <span class="dot-label">Kavisli Salon</span>
-            <span class="dot-progress"></span>
-          </button>
-          <button class="hero-dot" data-slide="2" aria-label="Slayt 3: Köşe Grubu">
-            <span class="dot-num">03</span>
-            <span class="dot-label">Köşe Grubu</span>
-            <span class="dot-progress"></span>
-          </button>
-        </div>
-
-        <!-- Video Kontrol Butonları (Oynat/Durdur & Ses) -->
-        <div class="hero-video-controls">
-          <button class="hero-ctrl-btn" id="hero-play-toggle" aria-label="Videoyu Durdur/Oynat" title="Videoyu Durdur/Oynat">
-            <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="ctrl-label">Durdur</span>
-          </button>
-
-          <button class="hero-ctrl-btn" id="hero-mute-toggle" aria-label="Sesi Aç/Kapat" title="Sesi Aç/Kapat">
-            <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-            <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-            <span class="ctrl-label">Ses Aç</span>
-          </button>
-        </div>
-
-        <div class="hero-nav-arrows">
-          <button class="hero-arrow-btn" id="hero-prev" aria-label="Önceki Görsel">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          <button class="hero-arrow-btn" id="hero-next" aria-label="Sonraki Görsel">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
+        <span>Messina Home · 2026 Showroom & Yaşam Alanı Turu</span>
       </div>
     </div>
 
-    <!-- Saloni Tarzı Aşağı Kaydır Göstergesi -->
-    <a href="#koleksiyon-baslangic" class="hero-scroll-hint" aria-label="Aşağı kaydırın">
-      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-      <span class="scroll-text">Keşfetmek İçin Kaydırın</span>
-    </a>
+    <!-- Alt Minimalist Kontrol Çubuğu & Aşağı Kaydır -->
+    <div class="hero-clean-bottom container">
+      <div class="hero-video-controls">
+        <button class="hero-ctrl-btn" id="hero-play-toggle" aria-label="Videoyu Durdur/Oynat" title="Videoyu Durdur/Oynat">
+          <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span class="ctrl-label">Durdur</span>
+        </button>
+
+        <button class="hero-ctrl-btn" id="hero-mute-toggle" aria-label="Sesi Aç/Kapat" title="Sesi Aç/Kapat">
+          <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <span class="ctrl-label">Ses Aç</span>
+          <span class="sound-wave"><span></span><span></span><span></span><span></span></span>
+        </button>
+      </div>
+
+      <a href="#manifesto-baslangic" class="hero-scroll-hint" aria-label="Aşağı kaydırın">
+        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+        <span class="scroll-text">Keşfetmek İçin Kaydırın</span>
+      </a>
+    </div>
   </section>
 
-  <div id="koleksiyon-baslangic"></div>
-
-  <!-- HIZLI GÜVEN & AVANTAJ ŞERİDİ -->
-  <section class="hero-features-strip">
+  <!-- HERO MANIFESTO — Premium Başlık & Değerler Bölümü (Heronun Hemen Altında) -->
+  <section class="hero-manifesto-section" id="manifesto-baslangic">
     <div class="container">
-      <div class="features-strip-grid">
-        <div class="strip-item">
-          <div class="strip-icon">
+      <div class="manifesto-card reveal">
+        <span class="eyebrow">Zamansız Tasarım · İnegöl Zanaatı</span>
+        <h1>Konfor ve Zarafetin <span class="italic-serif gold-text">Sanata</span> Dönüştüğü Yer</h1>
+        <p class="manifesto-lead">Saloni çizgilerini aratmayan modern estetik; İnegöl'ün usta el işçiliği ve birinci sınıf dokuma kumaşlarıyla yaşam alanlarınıza lüks ve zamansız bir atmosfer katıyor.</p>
+        
+        <div class="manifesto-actions">
+          <a href="urunler.html" class="btn btn--gold">
+            <span>Koleksiyonu Keşfet</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/905050332457?text=Merhaba%2C%20Saloni%20tarz%C4%B1%20koltuk%20modelleriniz%20ve%20fiyatlar%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--glass">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 0 4.57 3.718 8.288 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
+            <span>WhatsApp Katalog & Fiyat</span>
+          </a>
+        </div>
+
+        <div class="manifesto-badges-grid">
+          <div class="m-badge-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+              <strong>İnegöl Üretici Güvencesi</strong>
+              <span>Doğrudan atölyeden birinci sınıf malzeme</span>
+            </div>
           </div>
-          <div>
-            <strong>İnegöl Üretici Güvencesi</strong>
-            <span>Doğrudan atölyeden birinci sınıf malzeme</span>
-          </div>
-        </div>
-        <div class="strip-item">
-          <div class="strip-icon">
+          <div class="m-badge-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            <div>
+              <strong>Kişiye Özel Ölçü & Kumaş</strong>
+              <span>Mekanınıza göre sınırsız renk ve doku</span>
+            </div>
           </div>
-          <div>
-            <strong>Kişiye Özel Ölçü & Kumaş</strong>
-            <span>Mekanınıza göre sınırsız renk ve doku</span>
-          </div>
-        </div>
-        <div class="strip-item">
-          <div class="strip-icon">
+          <div class="m-badge-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <div>
-            <strong>Türkiye Geneli Teslimat</strong>
-            <span>Güvenli paketleme ve eve teslim kurulum</span>
+            <div>
+              <strong>Türkiye Geneli Teslimat</strong>
+              <span>Güvenli paketleme ve eve teslim kurulum</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 2. HERO SİNEMA BÖLÜMÜ — Lüks Detay & Zanaat Sineması (hero-video.mp4) -->
+  <section class="section cinema-section" id="sinema-bolumu">
+    <div class="container">
+      <div class="cinema-header reveal">
+        <div class="cinema-header-left">
+          <span class="eyebrow">Sinematik Deneyim</span>
+          <h2>Kusursuz Detaylar & <span class="gold-text italic-serif">Usta Zanaatı</span></h2>
+          <p>İnegöl atölyemizin zanaatkar dokunuşlarını, salon takımlarımızın estetik dikiş hatlarını ve lüks kumaş dokularını sinematik yakın plan çekimle izleyin.</p>
+        </div>
+        <div class="cinema-header-right">
+          <div class="cinema-live-pill">
+            <span class="pulse-ring"></span>
+            <span class="pill-dot"></span>
+            <span>4K Ultra HD Zanaat Çekimi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Formatında Sinema Video Oynatıcı Kartı -->
+      <div class="cinema-player-card reveal">
+        <div class="cinema-media-frame" id="cinema-frame">
+          <video id="cinema-main-video" class="cinema-video" playsinline poster="images/hero-2.jpg" autoplay muted loop>
+            <source src="videos/hero-video.mp4" type="video/mp4">
+            <source src="videos/showroom-video.mp4" type="video/mp4">
+          </video>
+
+          <div class="cinema-poster-fallback" id="cinema-poster-fallback" style="background-image: url('images/hero-2.jpg');"></div>
+
+          <!-- Video Üzeri Lüks Kontrol ve Başlık Katmanı -->
+          <div class="cinema-overlay" id="cinema-overlay">
+            <div class="cinema-overlay-top">
+              <span class="cinema-badge" id="cinema-badge">✦ 2026 Zanaat & Detay Çekimi ✦</span>
+              <div class="cinema-duration-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span id="cinema-duration-text">Sinematik Detay</span>
+              </div>
+            </div>
+
+            <div class="cinema-center-action">
+              <button class="cinema-big-play-btn" id="cinema-big-play" aria-label="Videoyu Başlat">
+                <span class="play-pulse"></span>
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <span class="cinema-play-label" id="cinema-play-label">Videoyu Durdur</span>
+            </div>
+
+            <div class="cinema-overlay-bottom">
+              <div class="cinema-text-block">
+                <h3 id="cinema-current-title">Messina Home İnegöl Zanaat & Lüks Kumaş Çekimi</h3>
+                <p id="cinema-current-desc">Fırınlanmış gürgen iskelet, el işçiliği dikişler ve İtalyan dokuma kumaşların büyüleyici detayları.</p>
+              </div>
+
+              <div class="cinema-quick-actions">
+                <button class="btn btn--glass btn--sm" id="cinema-modal-trigger" aria-label="Geniş Ekranda İzle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  <span>Tam Ekran Sinema</span>
+                </button>
+                <a href="https://wa.me/905050332457?text=Merhaba%2C%20web%20sitenizdeki%20tan%C4%B1t%C4%B1m%20videosunda%20g%C3%B6rd%C3%BC%C4%9F%C3%BCm%20modeller%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--whatsapp btn--sm">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 0 4.57 3.718 8.288 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
+                  <span>WhatsApp Bilgi Al</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Alt Kontrol Çubuğu (Oynarken Görünür) -->
+          <div class="cinema-controls-bar is-active" id="cinema-controls-bar">
+            <button class="cinema-ctrl-btn" id="cinema-play-pause-btn" aria-label="Oynat/Durdur">
+              <svg class="icon-ctrl-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="icon-ctrl-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+
+            <div class="cinema-progress-wrapper" id="cinema-progress-wrapper">
+              <div class="cinema-progress-fill" id="cinema-progress-fill"></div>
+            </div>
+
+            <span class="cinema-time-current" id="cinema-time-current">00:00</span>
+            <span class="cinema-time-divider">/</span>
+            <span class="cinema-time-total" id="cinema-time-total">00:10</span>
+
+            <button class="cinema-ctrl-btn" id="cinema-audio-btn" aria-label="Sesi Aç/Kapat">
+              <svg class="icon-ctrl-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <svg class="icon-ctrl-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            </button>
+
+            <button class="cinema-ctrl-btn" id="cinema-fullscreen-btn" aria-label="Tam Ekran">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -214,6 +271,10 @@
 
         <article class="car-card reveal">
           <div class="placeholder-img">
+            <span class="video-pill-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Video İnceleme
+            </span>
             <img src="images/cat-kose-koltuk.jpg" alt="Köşe Koltuk Grubu" loading="lazy">
             <span class="ph-label">Temsili Görsel</span>
           </div>
@@ -225,6 +286,10 @@
 
         <article class="car-card reveal reveal-delay-1">
           <div class="placeholder-img">
+            <span class="video-pill-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Video İnceleme
+            </span>
             <img src="images/cat-kanepe.jpg" alt="Kanepe / Üçlü Koltuk" loading="lazy">
             <span class="ph-label">Temsili Görsel</span>
           </div>
@@ -236,6 +301,10 @@
 
         <article class="car-card reveal reveal-delay-2">
           <div class="placeholder-img">
+            <span class="video-pill-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Video İnceleme
+            </span>
             <img src="images/cat-berjer.jpg" alt="Berjer Koltuk" loading="lazy">
             <span class="ph-label">Temsili Görsel</span>
           </div>
@@ -247,6 +316,10 @@
 
         <article class="car-card reveal">
           <div class="placeholder-img">
+            <span class="video-pill-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Video İnceleme
+            </span>
             <img src="images/cat-cekyat.jpg" alt="Yatak Koltuk (Çekyat)" loading="lazy">
             <span class="ph-label">Temsili Görsel</span>
           </div>
@@ -269,6 +342,10 @@
 
         <article class="car-card reveal reveal-delay-2">
           <div class="placeholder-img">
+            <span class="video-pill-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Özel Çözüm
+            </span>
             <img src="images/cat-ozel-tasarim.jpg" alt="Özel Tasarım Koltuk" loading="lazy">
             <span class="ph-label">Temsili Görsel</span>
           </div>
@@ -385,7 +462,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
           <a href="https://wa.me/905050332457" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 32 32" fill="currentColor" style="width:17px;height:17px"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3z"/></svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
           </a>
         </div>
       </div>
@@ -414,9 +491,46 @@
   </div>
 </footer>
 
+<!-- YÜZEN WHATSAPP BUTONU (OFFICIAL AUTHENTIC LOGO) -->
 <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp'tan yazın">
-  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
 </a>
+
+<!-- EVRENSEL VİDEO MODAL (SİNEMA POP-UP) -->
+<div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Tanıtım Videosu Oynatıcı">
+  <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+  <div class="video-modal-dialog">
+    <div class="video-modal-header">
+      <div class="video-modal-title-wrap">
+        <span class="video-modal-tag">MESSINA SİNEMA</span>
+        <h4 id="video-modal-title">2026 Tasarım Koleksiyonu Tanıtım Filmi</h4>
+      </div>
+      <button class="video-modal-close" id="video-modal-close" aria-label="Pencereyi Kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="video-modal-body">
+      <div class="video-modal-frame">
+        <video id="video-modal-player" playsinline controls poster="images/hero-1.jpg">
+          <source src="videos/tanitim-filmi.mp4" type="video/mp4">
+          <source src="videos/hero-video.mp4" type="video/mp4">
+        </video>
+        <iframe id="video-modal-iframe" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="display:none;"></iframe>
+      </div>
+    </div>
+    <div class="video-modal-footer">
+      <p id="video-modal-desc">Saloni çizgilerini aratmayan modern estetik ve İnegöl usta el işçiliği.</p>
+      <a href="https://wa.me/905050332457?text=Merhaba%2C%20web%20sitenizdeki%20tan%C4%B1t%C4%B1m%20videosunda%20g%C3%B6rd%C3%BC%C4%9F%C3%BCm%20modeller%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--whatsapp btn--sm">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
+        <span>Bu Modelleri Sorun</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- LÜKS ÖZEL MOUSE İMLECİ (CUSTOM CURSOR) -->
+<div class="custom-cursor-dot" id="cursor-dot"></div>
+<div class="custom-cursor-ring" id="cursor-ring"></div>
 
 <script src="js/main.js"></script>
 </body>

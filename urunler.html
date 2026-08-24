@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23161519' stroke='%23d4af37' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23d4af37' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
     <div class="nav-cta">
       <a href="iletisim.html" class="btn btn--outline">İletişim</a>
       <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="btn btn--whatsapp">
-        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
         WhatsApp
       </a>
     </div>
@@ -85,92 +85,152 @@
 
   <!-- DERGİ TARZI ÜRÜN SATIRLARI -->
   <section id="kose-koltuk" class="mag-row reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Video İnceleme
+      </span>
       <img src="images/cat-kose-koltuk.jpg" alt="Köşe Koltuk Grubu" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">01 — Koleksiyon</span>
       <h2>Köşe Koltuk Grubu</h2>
-      <p>Geniş salonlar için ferah, çok kişilik oturma grupları. Ailenizle veya misafirlerinizle keyifli vakit geçirebileceğiniz konforlu tasarımlar.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20K%C3%B6%C5%9Fe%20Koltuk%20Grubu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p>Geniş salonlar için ferah, modüler ve çok kişilik oturma grupları. Saloni konseptli kademeli başlık ve yatak mekanizması opsiyonlarıyla keyifli yaşam alanları.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Köşe Koltuk Grubu Video İnceleme" data-desc="Geniş oturum derinliği, silinebilir İtalyan bukle kumaş ve masif gürgen iskelet detayları." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20K%C3%B6%C5%9Fe%20Koltuk%20Grubu%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="kanepe" class="mag-row mag-row--reverse reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Video İnceleme
+      </span>
       <img src="images/cat-kanepe.jpg" alt="Kanepe / Üçlü Koltuk" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">02 — Koleksiyon</span>
       <h2>Kanepe / Üçlü Koltuk</h2>
-      <p>Klasik ve modern çizgilerde şık kanepe modelleri. Salonunuza zarafet katan, her tarza uygun seçenekler.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20Kanepe%20%2F%20%C3%9C%C3%A7l%C3%BC%20Koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p>Modern kavisli hatlar ve zamansız zarafet. Yüksek dansiteli 35 DNS HR sünger yapısıyla oturum konforunu zirveye taşıyan kanepe koleksiyonu.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Kanepe & Üçlü Koltuk Video İnceleme" data-desc="Modern kavisli dikiş hatları, dokuma zenginliği ve ergonomik oturum." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Kanepe%20%2F%20%C3%9C%C3%A7l%C3%BC%20Koltuk%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="berjer" class="mag-row reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Video İnceleme
+      </span>
       <img src="images/cat-berjer.jpg" alt="Berjer Koltuk" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">03 — Koleksiyon</span>
       <h2>Berjer Koltuk</h2>
-      <p>Tek kişilik, konforlu ve şık dinlenme koltukları. Okuma köşeniz veya kişisel dinlenme alanınız için ideal.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20Berjer%20Koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p>Tek kişilik, konforlu ve heykelsi dinlenme koltukları. Döner metal/ahşap ayak opsiyonları ve zengin kumaş kartelası ile yaşam alanınızın imza parçası.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Berjer Koltuk Video İnceleme" data-desc="360 derece döner mekanizma, nubuk doku ve bel destekli ergonomi." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Berjer%20Koltuk%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="cekyat" class="mag-row mag-row--reverse reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Video İnceleme
+      </span>
       <img src="images/cat-cekyat.jpg" alt="Yatak Koltuk (Çekyat)" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">04 — Koleksiyon</span>
-      <h2>Yatak Koltuk (Çekyat)</h2>
-      <p>Misafirleriniz için pratik açılır koltuk modelleri. Gün içinde koltuk, gece pratik bir yatak.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20Yatak%20Koltuk%20(%C3%87ekyat)%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <h2>Yatak Koltuk (Akıllı Çekyat)</h2>
+      <p>Misafirleriniz için pratik, sıfır makas mekanizmalı açılır koltuk modelleri. Gündüz şık bir kanepe, gece ortopedik bir çift kişilik yatak.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Akıllı Yatak Koltuk Mekanizma Videosu" data-desc="Tek elle açılan sıfır makas ray sistemi ve geniş sandık depolama alanı." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Yatak%20Koltuk%20(%C3%87ekyat)%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="sandalye-puf" class="mag-row reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Video İnceleme
+      </span>
       <img src="images/cat-sandalye-puf.jpg" alt="Sandalye & Puf" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">05 — Koleksiyon</span>
       <h2>Sandalye & Puf</h2>
-      <p>Oturma gruplarınızı tamamlayan sandalye ve puf seçenekleri. Detaylarla mekanınızı bütünler.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20Sandalye%20%26%20Puf%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p>Oturma gruplarınızı tamamlayan lüks sandalye ve modüler puf seçenekleri. Yemek odası ve salon kombinasyonları için estetik detaylar.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Sandalye & Puf Video İnceleme" data-desc="Ergonomik sırt yapısı ve fırınlanmış gürgen ayak mukavemeti." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20Sandalye%20%26%20Puf%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="ozel-tasarim" class="mag-row mag-row--reverse reveal">
-    <div class="mag-media">
+    <div class="mag-media" style="position:relative">
+      <span class="video-pill-badge" style="position:absolute;top:20px;left:20px;z-index:3">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        Özel Atölye
+      </span>
       <img src="images/cat-ozel-tasarim.jpg" alt="Özel Tasarım Koltuk" loading="lazy">
       <span class="ph-label">Temsili Görsel</span>
     </div>
     <div class="mag-text">
       <span class="eyebrow">06 — Koleksiyon</span>
-      <h2>Özel Tasarım Koltuk</h2>
-      <p>İsteğinize göre kumaş ve ölçü seçenekleriyle özel üretim. Mekanınıza tam uyum sağlayan çözümler sunuyoruz.</p>
-      <a href="https://wa.me/905050332457?text=Merhaba%2C%20%C3%96zel%20Tasar%C4%B1m%20Koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
-        Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <h2>Özel Tasarım Koltuk Çözümleri</h2>
+      <p>İsteğinize göre kumaş, renk ve santimetrik ölçü seçenekleriyle butik üretim. Mimari planınıza ve salonunuza %100 uyum sağlayan özel zanaat.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn--glass btn--sm urun-video-trigger" data-title="Özel Tasarım & Atölye Video Turu" data-desc="Müşteriye özel kumaş seçimi, sünger sertlik ayarı ve atölye üretim aşamaları." aria-label="Videoyu İzle">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold-light);width:14px;height:14px"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span>30sn Video İncele</span>
+        </button>
+        <a href="https://wa.me/905050332457?text=Merhaba%2C%20%C3%96zel%20Tasar%C4%B1m%20Koltuk%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="link-arrow">
+          Fiyat & Bilgi Al <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -197,7 +257,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
           <a href="https://wa.me/905050332457" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 32 32" fill="currentColor" style="width:17px;height:17px"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3z"/></svg>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
           </a>
         </div>
       </div>
@@ -226,10 +286,69 @@
   </div>
 </footer>
 
+<!-- EVRENSEL VİDEO MODAL (SİNEMA POP-UP) -->
+<div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Tanıtım Videosu Oynatıcı">
+  <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+  <div class="video-modal-dialog">
+    <div class="video-modal-header">
+      <div class="video-modal-title-wrap">
+        <span class="video-modal-tag">MESSINA SİNEMA</span>
+        <h4 id="video-modal-title">Koltuk Modeli Video İnceleme</h4>
+      </div>
+      <button class="video-modal-close" id="video-modal-close" aria-label="Pencereyi Kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="video-modal-body">
+      <div class="video-modal-frame">
+        <video id="video-modal-player" playsinline controls poster="images/cat-kose-koltuk.jpg">
+          <source src="videos/tanitim-filmi.mp4" type="video/mp4">
+          <source src="videos/hero-video.mp4" type="video/mp4">
+        </video>
+        <iframe id="video-modal-iframe" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="display:none;"></iframe>
+      </div>
+    </div>
+    <div class="video-modal-footer">
+      <p id="video-modal-desc">Saloni konseptli modüler ve fonksiyonel koltuk ayrıntıları.</p>
+      <a href="https://wa.me/905050332457?text=Merhaba%2C%20videodaki%20koltuk%20modeli%20hakk%C4%B1nda%20fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn--whatsapp btn--sm">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
+        <span>Bu Modeli Sorun</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <a href="https://wa.me/905050332457" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp'tan yazın">
-  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.372 3 4 8.373 4 15.001c0 2.386.66 4.61 1.804 6.512L4 29l7.66-1.76A11.94 11.94 0 0016 27c6.628 0 12-5.373 12-11.999C28 8.373 22.628 3 16.001 3zm0 21.6c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.55 1.05 1.08-4.44-.25-.4A9.55 9.55 0 016.4 15c0-5.303 4.298-9.6 9.6-9.6 5.303 0 9.6 4.297 9.6 9.6 0 5.302-4.297 9.6-9.6 9.6z"/></svg>
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.301-.777.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.175-.301-.019-.464.132-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.677-1.632-.928-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.278.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.78-.727 2.031-1.43.251-.703.251-1.305.175-1.43-.075-.126-.276-.201-.577-.351zM12.04 2C6.536 2 2.067 6.469 2.067 11.974c0 1.99.587 3.844 1.6 5.405L2 22l4.78-1.564a9.92 9.92 0 005.26 1.492c5.504 0 9.974-4.469 9.974-9.974C22.014 6.469 17.544 2 12.04 2zm0 18.274c-1.616 0-3.119-.488-4.385-1.328l-.314-.208-2.839.93.946-2.766-.228-.344a8.23 8.23 0 01-1.274-4.584c0-4.57 3.718-8.288 8.288-8.288 4.57 0 8.288 3.718 8.288 8.288 0 4.57-3.718 8.288-8.288 8.288z"/></svg>
 </a>
 
+<!-- LÜKS ÖZEL MOUSE İMLECİ (CUSTOM CURSOR) -->
+<div class="custom-cursor-dot" id="cursor-dot"></div>
+<div class="custom-cursor-ring" id="cursor-ring"></div>
+
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.urun-video-trigger').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var title = btn.dataset.title || 'Model Video İnceleme';
+        var desc = btn.dataset.desc || 'Messina Home usta işçiliği ve modüler konfor ayrıntıları.';
+        var modal = document.getElementById('video-modal');
+        var player = document.getElementById('video-modal-player');
+        var titleEl = document.getElementById('video-modal-title');
+        var descEl = document.getElementById('video-modal-desc');
+        if (titleEl) titleEl.textContent = title;
+        if (descEl) descEl.textContent = desc;
+        if (modal) {
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+          if (player) player.play().catch(function(){});
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
