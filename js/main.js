@@ -1,39 +1,498 @@
-// Messina Home — Ana Script Dosyası (Saloni Mobilya Referanslı Video & Sinema Yönetimi)
+// ==========================================================================
+// Messina Home — Ana Script & Çok Dilli (TR / EN) Yönetim Sistemi
+// ==========================================================================
+
+// ---------- 1. Çeviri Sözlüğü (i18n Dictionary) ----------
+var translations = {
+  tr: {
+    top_career: "KARİYER",
+    top_stores: "MAĞAZALAR",
+    top_search: "ARA",
+    search_placeholder: "Model, kategori veya kumaş arayın... (Örn: Köşe, Kanepe, Berjer)",
+    search_popular: "Popüler Aramalar:",
+    stores_title: "Messina Home Showroom & Mağazalar",
+    stores_main_flagship: "Merkez Showroom & Fabrika Satış",
+    stores_directions: "Yol Tarifi Al",
+    search_no_res: "Sonuç bulunamadı. Lütfen farklı bir arama terimi deneyin.",
+    nav_home: "ANA SAYFA",
+    nav_collection: "KOLEKSİYON",
+    nav_about: "HAKKIMIZDA",
+    nav_contact: "İLETİŞİM",
+    nav_stores: "MAĞAZALAR",
+    nav_cat_corner: "Köşe Koltuk Grubu",
+    nav_cat_sofa: "Kanepe / Üçlü Koltuk",
+    nav_cat_armchair: "Berjer Koltuk",
+    nav_cat_sofabed: "Yataklı Koltuk (Çekyat)",
+    nav_cat_chair_pouf: "Sandalye & Puf",
+    nav_cat_custom: "Özel Tasarım",
+    hero_tag: "Messina Home · 2026 Showroom & Yaşam Alanı Turu",
+    hero_pause: "Durdur",
+    hero_play: "Oynat",
+    hero_mute: "Ses Aç",
+    hero_unmute: "Sesi Kapat",
+    hero_scroll: "Keşfetmek İçin Kaydırın",
+    manifesto_eyebrow: "Zamansız Tasarım · İnegöl Zanaatı",
+    manifesto_h1: "Konfor ve Zarafetin Sanata Dönüştüğü Yer",
+    manifesto_lead: "Saloni çizgilerini aratmayan modern estetik; İnegöl'ün usta el işçiliği ve birinci sınıf dokuma kumaşlarıyla yaşam alanlarınıza lüks ve zamansız bir atmosfer katıyor.",
+    manifesto_btn_explore: "Koleksiyonu Keşfet",
+    manifesto_btn_wa: "WhatsApp Katalog & Fiyat",
+    badge_producer_title: "İnegöl Üretici Güvencesi",
+    badge_producer_desc: "Doğrudan atölyeden birinci sınıf malzeme",
+    badge_custom_title: "Kişiye Özel Ölçü & Kumaş",
+    badge_custom_desc: "Mekanınıza göre sınırsız renk ve doku",
+    badge_delivery_title: "Türkiye Geneli Teslimat",
+    badge_delivery_desc: "Güvenli paketleme ve eve teslim kurulum",
+    sec_collection_eyebrow: "Öne Çıkanlar",
+    sec_collection_title: "2026 Koltuk Koleksiyonu",
+    sec_collection_desc: "Modern çizgiler, ergonomik sırt destekleri ve silinebilir lüks dokuma kumaşlarla evinize şıklık katın.",
+    sec_cinema_eyebrow: "Sinematik Deneyim",
+    sec_cinema_title: "Yaşam Alanınızda İnegöl Ustalığı",
+    sec_cinema_desc: "Her dikişinde zarafet, her detayında konfor. Messina Home dünyasını keşfedin.",
+    sec_showcase_eyebrow: "Mimari Vizyon",
+    sec_showcase_title: "Mekanlara Özel Tasarım & Üretim",
+    sec_showcase_desc: "Evinizin ölçülerine ve zevkinize özel kişiselleştirilmiş mobilya çözümleri.",
+    sec_why_eyebrow: "Neden Messina Home?",
+    sec_why_title: "Konforun ve Kalitenin Farkı",
+    sec_why_desc: "Yılların getirdiği mobilya zanaatını modern tasarım anlayışıyla harmanlıyoruz.",
+    cat_corner_title: "Köşe Koltuk Grubu",
+    cat_corner_desc: "Geniş oturum, modüler yerleşim ve pürüzsüz dokuma kumaş kalitesi.",
+    cat_sofa_title: "Kanepe & Üçlü Koltuk",
+    cat_sofa_desc: "Zarif hatlar, yüksek ayak tasarımı ve birinci sınıf sünger konforu.",
+    cat_armchair_title: "Berjer Koltuk",
+    cat_armchair_desc: "Okuma köşeleriniz ve dinlenme anlarınız için şık tamamlayıcı.",
+    cat_sofabed_title: "Yataklı Koltuk (Çekyat)",
+    cat_sofabed_desc: "Kolay açılır mekanizma, ekstra saklama sandığı ve üstün uyku rahatlığı.",
+    cat_chair_pouf_title: "Sandalye & Puf",
+    cat_chair_pouf_desc: "Yemek ve salon alanlarınızı tamamlayan ergonomik formlar.",
+    cat_custom_title: "Kişiye Özel Tasarım",
+    cat_custom_desc: "Ölçünüze, salonunuza ve kumaş seçiminize özel butik üretim.",
+    btn_details: "Detayları İncele",
+    btn_all_products: "Tüm Ürünleri İncele",
+    badge_rep: "Temsili Görsel",
+    about_eyebrow: "Bizi Tanıyın",
+    about_title: "İnegöl'den Dünyaya Uzanan Konfor",
+    about_lead: "Messina Home olarak Bursa İnegöl'de başlayan mobilya yolculuğumuzda, modern çizgileri usta el işçiliğiyle buluşturuyoruz.",
+    about_card1_title: "Birinci Sınıf İskelet & Sünger",
+    about_card1_desc: "Fırınlanmış gürgen ağacı iskelet ve 35 dansite HR sünger ile uzun ömürlü dayanıklılık.",
+    about_card2_title: "Leke Tutmaz Lüks Kumaşlar",
+    about_card2_desc: "Kolay temizlenebilir keten, kadife, bukle ve nubuk dokular.",
+    about_card3_title: "Kişiye Özel Çözümler",
+    about_card3_desc: "Salonunuzun santimetresine göre modüler üretim ve renk uyumu.",
+    about_history_title: "Hikayemiz",
+    about_history_p1: "Mobilyanın başkenti İnegöl'de kurulan atölyemizde, her koltuğu bir sanat eseri özeniyle üretiyoruz.",
+    about_history_p2: "Amacımız sadece bir oturma grubu sunmak değil, aileniz ve sevdiklerinizle en güzel anıları paylaşacağınız sıcak ve lüks bir yaşam alanı yaratmaktır.",
+    contact_eyebrow: "Bize Ulaşın",
+    contact_title: "Sizi Showroomumuzda Ağırlamaktan Mutluluk Duyarız",
+    contact_lead: "Koltuk modellerimiz, kumaş kartelalarımız ve özel ölçü talepleriniz için bize ulaşın.",
+    contact_address_title: "Adresimiz",
+    contact_address_val: "Ertuğrulgazi Cad. Mobilya Vadisi, İnegöl / Bursa",
+    contact_phone_title: "Telefon & WhatsApp",
+    contact_hours_title: "Çalışma Saatleri",
+    contact_hours_val: "Pazartesi – Cumartesi: 09:00 – 19:30 | Pazar: 11:00 – 18:00",
+    contact_form_title: "Bize Mesaj Gönderin",
+    contact_form_name: "Adınız Soyadınız",
+    contact_form_phone: "Telefon Numaranız",
+    contact_form_message: "Mesajınız / İlgilendiğiniz Ürün",
+    contact_form_btn: "WhatsApp Üzerinden Gönder",
+    contact_form_note: "Form gönderildiğinde doğrudan WhatsApp açılacak ve mesajınız iletilecektir.",
+    footer_tagline: "Bursa İnegöl'de modern tasarım ve usta el işçiliğiyle üretilen lüks koltuk takımları.",
+    footer_quick_links: "Hızlı Bağlantılar",
+    footer_categories: "Koleksiyonlar",
+    footer_contact: "İletişim & Konum",
+    footer_rights: "Tüm hakları saklıdır. Bursa / İnegöl."
+  },
+  en: {
+    top_career: "CAREER",
+    top_stores: "STORES",
+    top_search: "SEARCH",
+    search_placeholder: "Search for models, categories or fabrics... (e.g. Corner, Sofa, Armchair)",
+    search_popular: "Popular Searches:",
+    stores_title: "Messina Home Showroom & Stores",
+    stores_main_flagship: "Flagship Showroom & Direct Factory Sale",
+    stores_directions: "Get Directions",
+    search_no_res: "No results found. Please try another search term.",
+    nav_home: "HOME",
+    nav_collection: "COLLECTION",
+    nav_about: "ABOUT US",
+    nav_contact: "CONTACT",
+    nav_stores: "STORES",
+    nav_cat_corner: "Corner Sofa Sets",
+    nav_cat_sofa: "Sofa / 3-Seater Couch",
+    nav_cat_armchair: "Armchair & Accent Chairs",
+    nav_cat_sofabed: "Convertible Sofa Beds",
+    nav_cat_chair_pouf: "Chairs & Poufs",
+    nav_cat_custom: "Bespoke Custom Design",
+    hero_tag: "Messina Home · 2026 Showroom & Living Space Tour",
+    hero_pause: "Pause",
+    hero_play: "Play",
+    hero_mute: "Unmute",
+    hero_unmute: "Mute",
+    hero_scroll: "Scroll to Discover",
+    manifesto_eyebrow: "Timeless Design · İnegöl Craftsmanship",
+    manifesto_h1: "Where Comfort and Elegance Turn Into Art",
+    manifesto_lead: "Contemporary aesthetics rivaling leading luxury European brands; bringing timeless warmth to your living spaces with master craftsmanship and premium woven fabrics from İnegöl.",
+    manifesto_btn_explore: "Explore Collection",
+    manifesto_btn_wa: "WhatsApp Catalog & Pricing",
+    badge_producer_title: "Direct Producer Guarantee",
+    badge_producer_desc: "First-class materials crafted directly in our atelier",
+    badge_custom_title: "Custom Dimensions & Fabrics",
+    badge_custom_desc: "Unlimited texture and color choices tailored to your space",
+    badge_delivery_title: "Worldwide & Nationwide Delivery",
+    badge_delivery_desc: "Secure packing and direct white-glove delivery",
+    sec_collection_eyebrow: "Featured Picks",
+    sec_collection_title: "2026 Sofa Collection",
+    sec_collection_desc: "Elevate your home with modern silhouettes, ergonomic back support, and easy-to-clean luxury fabrics.",
+    sec_cinema_eyebrow: "Cinematic Experience",
+    sec_cinema_title: "İnegöl Mastery in Your Living Room",
+    sec_cinema_desc: "Elegance in every stitch, pure comfort in every detail. Step inside the Messina Home world.",
+    sec_showcase_eyebrow: "Architectural Vision",
+    sec_showcase_title: "Bespoke Furniture for Distinct Spaces",
+    sec_showcase_desc: "Personalized furniture solutions customized to your room dimensions and refined taste.",
+    sec_why_eyebrow: "Why Messina Home?",
+    sec_why_title: "The Difference of Craft and Comfort",
+    sec_why_desc: "Blending decades of furniture craftsmanship with contemporary architectural sensibilities.",
+    cat_corner_title: "Corner Sofa Sets",
+    cat_corner_desc: "Spacious seating, modular layouts, and ultra-durable luxury woven textures.",
+    cat_sofa_title: "Sofas & Couches",
+    cat_sofa_desc: "Sculptural profiles, elevated metal/wood legs, and high-resilience foam comfort.",
+    cat_armchair_title: "Accent & Lounge Armchairs",
+    cat_armchair_desc: "The perfect companion for your reading nooks and cozy lounging hours.",
+    cat_sofabed_title: "Convertible Sofa Beds",
+    cat_sofabed_desc: "Effortless opening mechanism, generous hidden storage, and superior sleeping comfort.",
+    cat_chair_pouf_title: "Dining Chairs & Poufs",
+    cat_chair_pouf_desc: "Ergonomic seating companions that complete your dining and living spaces.",
+    cat_custom_title: "Bespoke Custom Furniture",
+    cat_custom_desc: "Tailor-made production according to your architectural floor plan and fabric selection.",
+    btn_details: "View Details",
+    btn_all_products: "View All Products",
+    badge_rep: "Showcase Visual",
+    about_eyebrow: "About Us",
+    about_title: "Comfort Reaching from İnegöl to the World",
+    about_lead: "Starting our furniture journey in Bursa İnegöl, we bring together contemporary design lines with timeless artisanal handcraft.",
+    about_card1_title: "Kiln-Dried Hornbeam & Premium Foam",
+    about_card1_desc: "Kiln-dried solid hornbeam frames paired with 35 DNS HR foam for decades of enduring durability.",
+    about_card2_title: "Stain-Resistant Luxury Fabrics",
+    about_card2_desc: "Easy-care linens, velvets, boucle, and nubuck textiles in rich bespoke palettes.",
+    about_card3_title: "Customized Architectural Solutions",
+    about_card3_desc: "Modular tailoring to the exact centimeters of your living room.",
+    about_history_title: "Our Story",
+    about_history_p1: "Founded in İnegöl, Turkey's furniture capital, we craft each sofa with the meticulous care of an art piece.",
+    about_history_p2: "Our purpose is not merely to build furniture, but to create a warm, luxurious haven where you share life's finest memories.",
+    contact_eyebrow: "Contact Us",
+    contact_title: "We Look Forward to Welcoming You to Our Showroom",
+    contact_lead: "Get in touch for our sofa collections, fabric swatches, or custom dimension consultations.",
+    contact_address_title: "Our Address",
+    contact_address_val: "Ertugrulgazi St. Furniture Valley, Inegol / Bursa, Turkey",
+    contact_phone_title: "Phone & WhatsApp",
+    contact_hours_title: "Opening Hours",
+    contact_hours_val: "Monday – Saturday: 09:00 – 19:30 | Sunday: 11:00 – 18:00",
+    contact_form_title: "Send Us a Message",
+    contact_form_name: "Full Name",
+    contact_form_phone: "Phone Number",
+    contact_form_message: "Your Message / Interested Model",
+    contact_form_btn: "Send via WhatsApp",
+    contact_form_note: "Submitting this form will automatically open WhatsApp with your pre-filled inquiry.",
+    footer_tagline: "Luxury sofa collections crafted with modern design and master craftsmanship in Bursa İnegöl.",
+    footer_quick_links: "Quick Links",
+    footer_categories: "Collections",
+    footer_contact: "Contact & Location",
+    footer_rights: "All rights reserved. Bursa / İnegöl."
+  }
+};
+
+var searchableItems = [
+  {
+    id: "kose-koltuk",
+    title_tr: "Köşe Koltuk Grubu",
+    title_en: "Corner Sofa Sets",
+    desc_tr: "Modüler lüks yerleşim ve geniş oturum",
+    desc_en: "Modular luxury layout & spacious seating",
+    category_tr: "Koleksiyon",
+    category_en: "Collection",
+    url: "urunler.html#kose-koltuk",
+    img: "images/cat-kose-koltuk.jpg",
+    tags: ["köşe", "l koltuk", "corner", "modüler", "kanepe", "oturma grubu", "sectionals"]
+  },
+  {
+    id: "kanepe",
+    title_tr: "Kanepe / Üçlü Koltuk",
+    title_en: "Sofas & Couches",
+    desc_tr: "Zarif siluet ve birinci sınıf sünger konforu",
+    desc_en: "Sculptural profile and premium foam comfort",
+    category_tr: "Koleksiyon",
+    category_en: "Collection",
+    url: "urunler.html#kanepe",
+    img: "images/cat-kanepe.jpg",
+    tags: ["kanepe", "üçlü", "sofa", "couch", "koltuk", "living room"]
+  },
+  {
+    id: "berjer",
+    title_tr: "Berjer Koltuk",
+    title_en: "Accent Armchairs",
+    desc_tr: "Okuma ve dinlenme köşeleri için şık berjer",
+    desc_en: "Elegant armchairs for reading and lounge spaces",
+    category_tr: "Koleksiyon",
+    category_en: "Collection",
+    url: "urunler.html#berjer",
+    img: "images/cat-berjer.jpg",
+    tags: ["berjer", "tekli", "armchair", "lounge", "dinlenme"]
+  },
+  {
+    id: "cekyat",
+    title_tr: "Yataklı Koltuk (Çekyat)",
+    title_en: "Convertible Sofa Beds",
+    desc_tr: "Kolay açılır mekanizma ve ekstra sandıklı depolama",
+    desc_en: "Easy fold-out mechanism with hidden storage",
+    category_tr: "Koleksiyon",
+    category_en: "Collection",
+    url: "urunler.html#cekyat",
+    img: "images/cat-cekyat.jpg",
+    tags: ["çekyat", "yataklı", "sofabed", "misafir", "sandıklı"]
+  },
+  {
+    id: "sandalye-puf",
+    title_tr: "Sandalye & Puf",
+    title_en: "Chairs & Poufs",
+    desc_tr: "Yemek odası ve salon tamamlayıcı formlar",
+    desc_en: "Dining chairs & accent poufs",
+    category_tr: "Koleksiyon",
+    category_en: "Collection",
+    url: "urunler.html#sandalye-puf",
+    img: "images/cat-sandalye-puf.jpg",
+    tags: ["sandalye", "puf", "chair", "pouf", "bench", "oturak"]
+  },
+  {
+    id: "ozel-tasarim",
+    title_tr: "Özel Tasarım & Projeler",
+    title_en: "Bespoke Custom Furniture",
+    desc_tr: "Mekanınıza özel santimetre ölçüsünde üretim",
+    desc_en: "Tailor-made production for your architectural project",
+    category_tr: "Projeler",
+    category_en: "Projects",
+    url: "urunler.html#ozel-tasarim",
+    img: "images/cat-ozel-tasarim.jpg",
+    tags: ["özel", "tasarım", "proje", "mimari", "custom", "bespoke", "inegöl"]
+  }
+];
+
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---------- 1. Mobil Menü Aç / Kapat ----------
-  var toggle = document.querySelector('.nav-toggle');
-  var links = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      links.classList.toggle('open');
-      var expanded = links.classList.contains('open');
-      toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  var currentLang = localStorage.getItem('messina_lang') || 'tr';
+
+  function applyLanguage(lang) {
+    if (!translations[lang]) lang = 'tr';
+    currentLang = lang;
+    localStorage.setItem('messina_lang', lang);
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
     });
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { links.classList.remove('open'); });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute('placeholder', translations[lang][key]);
+      }
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    updateWhatsAppLinks(lang);
+  }
+
+  function updateWhatsAppLinks(lang) {
+    var defaultMsg = lang === 'en'
+      ? 'Hello, I would like to get information about Messina Home furniture collection, models and pricing.'
+      : 'Merhaba, Messina Home koltuk modelleriniz ve fiyatlar hakkında bilgi almak istiyorum.';
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+      var href = link.getAttribute('href');
+      var base = href.split('?')[0];
+      link.setAttribute('href', base + '?text=' + encodeURIComponent(defaultMsg));
     });
   }
 
-  // ---------- 2. Footer Yılı ----------
-  var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // ---------- 3. Karusel Ok Butonları ----------
-  document.querySelectorAll('.car-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var track = document.getElementById(btn.dataset.target);
-      if (!track) return;
-      var card = track.querySelector('.car-card');
-      var step = (card ? card.offsetWidth : 340) + 24;
-      var dir = parseInt(btn.dataset.dir, 10) || 1;
-      track.scrollBy({ left: dir * step, behavior: 'smooth' });
+  document.querySelectorAll('.lang-btn, .lang-item').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetLang = btn.getAttribute('data-lang');
+      if (targetLang === 'tr' || targetLang === 'en') {
+        applyLanguage(targetLang);
+      } else {
+        applyLanguage('en');
+      }
     });
   });
 
+  applyLanguage(currentLang);
+
+  var toggleBtn = document.getElementById('nav-toggle-btn');
+  var drawer = document.getElementById('mobile-drawer');
+  var drawerClose = document.getElementById('mobile-drawer-close');
+
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', function () {
+      drawer.classList.add('open');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    });
+  }
+  if (drawerClose && drawer) {
+    drawerClose.addEventListener('click', function () {
+      drawer.classList.remove('open');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  }
+  if (drawer) {
+    drawer.querySelectorAll('.mobile-nav-item').forEach(function (a) {
+      a.addEventListener('click', function () {
+        drawer.classList.remove('open');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  var searchModal = document.getElementById('search-modal');
+  var openSearchBtn = document.getElementById('open-search-btn');
+  var mobileSearchBtn = document.getElementById('mobile-search-btn');
+  var closeSearchBtn = document.getElementById('search-modal-close');
+  var searchBackdrop = document.getElementById('search-modal-backdrop');
+  var searchInput = document.getElementById('site-search-input');
+  var searchItemsList = document.getElementById('search-items-list');
+
+  function openSearch() {
+    if (!searchModal) return;
+    if (drawer) drawer.classList.remove('open');
+    searchModal.classList.add('active');
+    searchModal.setAttribute('aria-hidden', 'false');
+    if (searchInput) {
+      searchInput.value = '';
+      setTimeout(function () { searchInput.focus(); }, 150);
+      renderSearchResults('');
+    }
+  }
+
+  function closeSearch() {
+    if (!searchModal) return;
+    searchModal.classList.remove('active');
+    searchModal.setAttribute('aria-hidden', 'true');
+  }
+
+  if (openSearchBtn) openSearchBtn.addEventListener('click', openSearch);
+  if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', openSearch);
+  if (closeSearchBtn) closeSearchBtn.addEventListener('click', closeSearch);
+  if (searchBackdrop) searchBackdrop.addEventListener('click', closeSearch);
+
+  function renderSearchResults(query) {
+    if (!searchItemsList) return;
+    query = (query || '').toLowerCase().trim();
+
+    var filtered = searchableItems.filter(function (item) {
+      if (!query) return true;
+      var titleTR = (item.title_tr || '').toLowerCase();
+      var titleEN = (item.title_en || '').toLowerCase();
+      var descTR = (item.desc_tr || '').toLowerCase();
+      var descEN = (item.desc_en || '').toLowerCase();
+      var tagMatch = item.tags && item.tags.some(function (t) { return t.toLowerCase().includes(query); });
+
+      return titleTR.includes(query) || titleEN.includes(query) || descTR.includes(query) || descEN.includes(query) || tagMatch;
+    });
+
+    if (filtered.length === 0) {
+      searchItemsList.innerHTML = '<p style="color:rgba(255,255,255,0.6); padding:20px 0; text-align:center;">' + (translations[currentLang].search_no_res) + '</p>';
+      return;
+    }
+
+    var html = '';
+    filtered.forEach(function (item) {
+      var title = currentLang === 'en' ? item.title_en : item.title_tr;
+      var desc = currentLang === 'en' ? item.desc_en : item.desc_tr;
+      var cat = currentLang === 'en' ? item.category_en : item.category_tr;
+
+      html += '<a href="' + item.url + '" class="search-item-card" onclick="document.getElementById(\'search-modal\').classList.remove(\'active\')">' +
+        '<img src="' + item.img + '" alt="' + title + '" class="search-item-img">' +
+        '<div class="search-item-info">' +
+          '<h4 class="search-item-title">' + title + '</h4>' +
+          '<p class="search-item-desc">' + desc + '</p>' +
+        '</div>' +
+        '<span class="search-item-badge">' + cat + '</span>' +
+      '</a>';
+    });
+
+    searchItemsList.innerHTML = html;
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      renderSearchResults(searchInput.value);
+    });
+  }
+
+  document.querySelectorAll('.quick-tag').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var q = btn.getAttribute('data-query');
+      if (searchInput) {
+        searchInput.value = q;
+        renderSearchResults(q);
+      }
+    });
+  });
+
+  var storesModal = document.getElementById('stores-modal');
+  var closeStoresBtn = document.getElementById('stores-modal-close');
+  var storesBackdrop = document.getElementById('stores-modal-backdrop');
+
+  function openStores(e) {
+    if (e) e.preventDefault();
+    if (storesModal) {
+      storesModal.classList.add('active');
+      storesModal.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  function closeStores() {
+    if (storesModal) {
+      storesModal.classList.remove('active');
+      storesModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  document.querySelectorAll('.open-stores-btn').forEach(function (btn) {
+    btn.addEventListener('click', openStores);
+  });
+  if (closeStoresBtn) closeStoresBtn.addEventListener('click', closeStores);
+  if (storesBackdrop) storesBackdrop.addEventListener('click', closeStores);
+
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeSearch();
+      closeStores();
+      if (drawer) drawer.classList.remove('open');
+      var videoModal = document.getElementById('video-modal');
+      if (videoModal && videoModal.classList.contains('active')) {
+        videoModal.classList.remove('active');
+        var player = document.getElementById('modal-video-player');
+        if (player) player.pause();
+      }
+    }
+  });
+
+  // ---------- 6. Footer Yılı ----------
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ---------- 4. Hero Görsel Karuseli (Fallback) ----------
+  // ---------- 7. Hero Görsel Karuseli (Fallback) ----------
   var slides = document.querySelectorAll('.hero-slide');
   var dots = document.querySelectorAll('.hero-dot');
   var prevBtn = document.getElementById('hero-prev');
@@ -82,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startSliderTimer();
   }
 
-  // ---------- 5. Hero Arka Plan Videosu Yönetimi ----------
+  // ---------- 8. Hero Arka Plan Videosu Yönetimi ----------
   var heroVideo = document.getElementById('hero-bg-video');
   var heroPlayToggle = document.getElementById('hero-play-toggle');
   var heroMuteToggle = document.getElementById('hero-mute-toggle');
@@ -93,19 +552,12 @@ document.addEventListener('DOMContentLoaded', function () {
       heroVideo.classList.add('is-playing');
       if (heroSliderFallback) heroSliderFallback.style.opacity = '0';
     }
-
     heroVideo.addEventListener('playing', handleHeroPlaying);
     heroVideo.addEventListener('canplay', function () {
       heroVideo.play().then(handleHeroPlaying).catch(function () {});
     });
-
-    if (!heroVideo.paused || heroVideo.readyState >= 2) {
-      handleHeroPlaying();
-    }
-
-    heroVideo.addEventListener('error', function () {
-      if (heroSliderFallback) heroSliderFallback.style.opacity = '1';
-    });
+    if (!heroVideo.paused || heroVideo.readyState >= 2) handleHeroPlaying();
+    heroVideo.addEventListener('error', function () { if (heroSliderFallback) heroSliderFallback.style.opacity = '1'; });
 
     if (heroPlayToggle) {
       heroPlayToggle.addEventListener('click', function () {
@@ -113,18 +565,17 @@ document.addEventListener('DOMContentLoaded', function () {
         var iconPause = heroPlayToggle.querySelector('.icon-pause');
         var iconPlay = heroPlayToggle.querySelector('.icon-play');
         var label = heroPlayToggle.querySelector('.ctrl-label');
-
         if (isPaused) {
           heroVideo.play().catch(function(){});
           if (iconPause) iconPause.style.display = 'block';
           if (iconPlay) iconPlay.style.display = 'none';
-          if (label) label.textContent = 'Durdur';
+          if (label) label.textContent = currentLang === 'en' ? 'Pause' : 'Durdur';
           heroPlayToggle.classList.remove('active');
         } else {
           heroVideo.pause();
           if (iconPause) iconPause.style.display = 'none';
           if (iconPlay) iconPlay.style.display = 'block';
-          if (label) label.textContent = 'Oynat';
+          if (label) label.textContent = currentLang === 'en' ? 'Play' : 'Oynat';
           heroPlayToggle.classList.add('active');
         }
       });
@@ -136,317 +587,61 @@ document.addEventListener('DOMContentLoaded', function () {
         var iconMuted = heroMuteToggle.querySelector('.icon-muted');
         var iconUnmuted = heroMuteToggle.querySelector('.icon-unmuted');
         var label = heroMuteToggle.querySelector('.ctrl-label');
-
         if (isMuted) {
           heroVideo.muted = false;
           if (iconMuted) iconMuted.style.display = 'none';
           if (iconUnmuted) iconUnmuted.style.display = 'block';
-          if (label) label.textContent = 'Sesi Kapat';
+          if (label) label.textContent = currentLang === 'en' ? 'Mute' : 'Sesi Kapat';
           heroMuteToggle.classList.add('active');
         } else {
           heroVideo.muted = true;
           if (iconMuted) iconMuted.style.display = 'block';
           if (iconUnmuted) iconUnmuted.style.display = 'none';
-          if (label) label.textContent = 'Ses Aç';
+          if (label) label.textContent = currentLang === 'en' ? 'Unmute' : 'Ses Aç';
           heroMuteToggle.classList.remove('active');
         }
       });
     }
   }
 
-  // ---------- 6. Zaman Biçimlendirme Yardımcısı (mm:ss) ----------
-  function formatTime(seconds) {
-    if (isNaN(seconds) || seconds < 0) return '00:00';
-    var mins = Math.floor(seconds / 60);
-    var secs = Math.floor(seconds % 60);
-    return (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
-  }
-
-  // ---------- 7. Messina Sinema — İnteraktif Video Galerisi ----------
-  var cinemaVideo = document.getElementById('cinema-main-video');
-  var cinemaFrame = document.getElementById('cinema-frame');
-  var cinemaOverlay = document.getElementById('cinema-overlay');
-  var cinemaBigPlay = document.getElementById('cinema-big-play');
-  var cinemaBadge = document.getElementById('cinema-badge');
-  var cinemaDurationText = document.getElementById('cinema-duration-text');
-  var cinemaCurrentTitle = document.getElementById('cinema-current-title');
-  var cinemaCurrentDesc = document.getElementById('cinema-current-desc');
-  var cinemaPosterFallback = document.getElementById('cinema-poster-fallback');
-  var cinemaPlayLabel = document.getElementById('cinema-play-label');
-
-  // Alt kontrol çubuğu öğeleri
-  var cinemaControlsBar = document.getElementById('cinema-controls-bar');
-  var cinemaPlayPauseBtn = document.getElementById('cinema-play-pause-btn');
-  var cinemaProgressWrapper = document.getElementById('cinema-progress-wrapper');
-  var cinemaProgressFill = document.getElementById('cinema-progress-fill');
-  var cinemaTimeCurrent = document.getElementById('cinema-time-current');
-  var cinemaTimeTotal = document.getElementById('cinema-time-total');
-  var cinemaAudioBtn = document.getElementById('cinema-audio-btn');
-  var cinemaFullscreenBtn = document.getElementById('cinema-fullscreen-btn');
-
-  var cinemaTabs = document.querySelectorAll('.cinema-tab-btn');
-
-  function updateCinemaPlayState(isPlaying) {
-    if (!cinemaBigPlay || !cinemaControlsBar) return;
-    var bigPlayIcon = cinemaBigPlay.querySelector('.icon-play');
-    var bigPauseIcon = cinemaBigPlay.querySelector('.icon-pause');
-    var ctrlPlayIcon = cinemaPlayPauseBtn ? cinemaPlayPauseBtn.querySelector('.icon-ctrl-play') : null;
-    var ctrlPauseIcon = cinemaPlayPauseBtn ? cinemaPlayPauseBtn.querySelector('.icon-ctrl-pause') : null;
-
-    if (isPlaying) {
-      if (bigPlayIcon) bigPlayIcon.style.display = 'none';
-      if (bigPauseIcon) bigPauseIcon.style.display = 'block';
-      if (ctrlPlayIcon) ctrlPlayIcon.style.display = 'none';
-      if (ctrlPauseIcon) ctrlPauseIcon.style.display = 'block';
-      if (cinemaPlayLabel) cinemaPlayLabel.textContent = 'Videoyu Duraklat';
-      if (cinemaOverlay) cinemaOverlay.classList.add('is-hidden');
-      if (cinemaPosterFallback) cinemaPosterFallback.classList.remove('visible');
-      cinemaControlsBar.classList.add('is-active');
-    } else {
-      if (bigPlayIcon) bigPlayIcon.style.display = 'block';
-      if (bigPauseIcon) bigPauseIcon.style.display = 'none';
-      if (ctrlPlayIcon) ctrlPlayIcon.style.display = 'block';
-      if (ctrlPauseIcon) ctrlPauseIcon.style.display = 'none';
-      if (cinemaPlayLabel) cinemaPlayLabel.textContent = 'Tanıtım Videosunu İzle';
-      if (cinemaOverlay) cinemaOverlay.classList.remove('is-hidden');
-    }
-  }
-
-  if (cinemaVideo) {
-    cinemaVideo.addEventListener('play', function () { updateCinemaPlayState(true); });
-    cinemaVideo.addEventListener('pause', function () { updateCinemaPlayState(false); });
-    cinemaVideo.addEventListener('playing', function () { updateCinemaPlayState(true); });
-    cinemaVideo.addEventListener('canplay', function () {
-      if (cinemaVideo.paused) {
-        cinemaVideo.play().then(function(){ updateCinemaPlayState(true); }).catch(function(){});
-      }
-    });
-
-    if (!cinemaVideo.paused || cinemaVideo.readyState >= 2) {
-      updateCinemaPlayState(true);
-    }
-
-    cinemaVideo.addEventListener('ended', function () {
-      updateCinemaPlayState(false);
-      if (cinemaProgressFill) cinemaProgressFill.style.width = '0%';
-    });
-
-    cinemaVideo.addEventListener('timeupdate', function () {
-      if (cinemaVideo.duration) {
-        var pct = (cinemaVideo.currentTime / cinemaVideo.duration) * 100;
-        if (cinemaProgressFill) cinemaProgressFill.style.width = pct + '%';
-        if (cinemaTimeCurrent) cinemaTimeCurrent.textContent = formatTime(cinemaVideo.currentTime);
-      }
-    });
-
-    cinemaVideo.addEventListener('loadedmetadata', function () {
-      if (cinemaTimeTotal && cinemaVideo.duration) {
-        cinemaTimeTotal.textContent = formatTime(cinemaVideo.duration);
-      }
-    });
-
-    // Dev Play butonu tıklaması
-    if (cinemaBigPlay) {
-      cinemaBigPlay.addEventListener('click', function (e) {
-        e.stopPropagation();
-        if (cinemaVideo.paused) {
-          cinemaVideo.play().catch(function () {
-            // Video dosyası yoksa modalı açarak YouTube veya tanıtım görseliyle oynat
-            openVideoModal(cinemaVideo.currentSrc || 'videos/tanitim-filmi.mp4', cinemaCurrentTitle ? cinemaCurrentTitle.textContent : 'Messina Home Tanıtım Filmi', cinemaCurrentDesc ? cinemaCurrentDesc.textContent : '');
-          });
-        } else {
-          cinemaVideo.pause();
-        }
-      });
-    }
-
-    // Alt bardaki Play/Pause butonu
-    if (cinemaPlayPauseBtn) {
-      cinemaPlayPauseBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        if (cinemaVideo.paused) {
-          cinemaVideo.play().catch(function(){});
-        } else {
-          cinemaVideo.pause();
-        }
-      });
-    }
-
-    // İlerleme çubuğuna tıklayarak sarma (seek)
-    if (cinemaProgressWrapper) {
-      cinemaProgressWrapper.addEventListener('click', function (e) {
-        var rect = cinemaProgressWrapper.getBoundingClientRect();
-        var clickX = e.clientX - rect.left;
-        var ratio = Math.max(0, Math.min(1, clickX / rect.width));
-        if (cinemaVideo.duration) {
-          cinemaVideo.currentTime = ratio * cinemaVideo.duration;
-        }
-      });
-    }
-
-    // Ses Aç/Kapat Butonu
-    if (cinemaAudioBtn) {
-      cinemaAudioBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var unmutedIcon = cinemaAudioBtn.querySelector('.icon-ctrl-unmuted');
-        var mutedIcon = cinemaAudioBtn.querySelector('.icon-ctrl-muted');
-        cinemaVideo.muted = !cinemaVideo.muted;
-        if (cinemaVideo.muted) {
-          if (unmutedIcon) unmutedIcon.style.display = 'none';
-          if (mutedIcon) mutedIcon.style.display = 'block';
-        } else {
-          if (unmutedIcon) unmutedIcon.style.display = 'block';
-          if (mutedIcon) mutedIcon.style.display = 'none';
-        }
-      });
-    }
-
-    // Tam Ekran Butonu
-    if (cinemaFullscreenBtn) {
-      cinemaFullscreenBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        if (!document.fullscreenElement) {
-          if (cinemaFrame && cinemaFrame.requestFullscreen) cinemaFrame.requestFullscreen();
-          else if (cinemaVideo.webkitRequestFullscreen) cinemaVideo.webkitRequestFullscreen();
-        } else {
-          if (document.exitFullscreen) document.exitFullscreen();
-        }
-      });
-    }
-
-    // Sekmeler arası geçiş
-    cinemaTabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        cinemaTabs.forEach(function (t) { t.classList.remove('active'); });
-        tab.classList.add('active');
-
-        var videoSrc = tab.dataset.videoSrc;
-        var poster = tab.dataset.poster;
-        var title = tab.dataset.title;
-        var desc = tab.dataset.desc;
-        var duration = tab.dataset.duration;
-        var tag = tab.dataset.tag;
-
-        if (cinemaBadge) cinemaBadge.textContent = tag;
-        if (cinemaDurationText) cinemaDurationText.textContent = duration;
-        if (cinemaTimeTotal) cinemaTimeTotal.textContent = duration;
-        if (cinemaCurrentTitle) cinemaCurrentTitle.textContent = title;
-        if (cinemaCurrentDesc) cinemaCurrentDesc.textContent = desc;
-
-        if (cinemaPosterFallback) {
-          cinemaPosterFallback.style.backgroundImage = "url('" + poster + "')";
-          cinemaPosterFallback.classList.add('visible');
-        }
-
-        cinemaVideo.pause();
-        cinemaVideo.poster = poster;
-
-        // Video kaynağını güncelle
-        var sources = cinemaVideo.querySelectorAll('source');
-        if (sources.length > 0) {
-          sources[0].src = videoSrc;
-        } else {
-          cinemaVideo.src = videoSrc;
-        }
-        cinemaVideo.load();
-        updateCinemaPlayState(false);
-        if (cinemaProgressFill) cinemaProgressFill.style.width = '0%';
-        if (cinemaTimeCurrent) cinemaTimeCurrent.textContent = '00:00';
-      });
-    });
-  }
-
-  // ---------- 8. Evrensel Video Modalı (Pop-up Sinema) ----------
+  // ---------- 9. Video İnceleme Modalı ----------
   var videoModal = document.getElementById('video-modal');
-  var videoModalClose = document.getElementById('video-modal-close');
-  var videoModalBackdrop = document.getElementById('video-modal-backdrop');
-  var videoModalPlayer = document.getElementById('video-modal-player');
-  var videoModalIframe = document.getElementById('video-modal-iframe');
-  var videoModalTitle = document.getElementById('video-modal-title');
-  var videoModalDesc = document.getElementById('video-modal-desc');
+  var videoPlayer = document.getElementById('modal-video-player');
+  var modalTitle = document.getElementById('modal-video-title');
+  var modalDesc = document.getElementById('modal-video-desc');
+  var modalClose = document.getElementById('video-modal-close');
+  var modalBackdrop = document.getElementById('video-modal-backdrop');
 
-  function openVideoModal(src, title, desc, isYoutube) {
+  function openVideoModal(src, title, desc) {
     if (!videoModal) return;
+    if (modalTitle && title) modalTitle.textContent = title;
+    if (modalDesc && desc) modalDesc.textContent = desc;
 
-    if (title && videoModalTitle) videoModalTitle.textContent = title;
-    if (desc && videoModalDesc) videoModalDesc.textContent = desc;
-
-    if (isYoutube && videoModalIframe && videoModalPlayer) {
-      videoModalPlayer.style.display = 'none';
-      videoModalPlayer.pause();
-      videoModalIframe.style.display = 'block';
-      videoModalIframe.src = src;
-    } else if (videoModalPlayer) {
-      if (videoModalIframe) {
-        videoModalIframe.style.display = 'none';
-        videoModalIframe.src = '';
-      }
-      videoModalPlayer.style.display = 'block';
-      if (src) {
-        var s = videoModalPlayer.querySelector('source');
-        if (s) s.src = src;
-        else videoModalPlayer.src = src;
-        videoModalPlayer.load();
-      }
-      videoModalPlayer.play().catch(function(){});
+    if (videoPlayer) {
+      videoPlayer.src = src;
+      videoPlayer.load();
+      videoPlayer.play().catch(function () {});
     }
 
-    videoModal.classList.add('is-open');
+    videoModal.classList.add('active');
     videoModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeVideoModal() {
     if (!videoModal) return;
-    videoModal.classList.remove('is-open');
+    videoModal.classList.remove('active');
     videoModal.setAttribute('aria-hidden', 'true');
+    if (videoPlayer) {
+      videoPlayer.pause();
+      videoPlayer.src = '';
+    }
     document.body.style.overflow = '';
-
-    if (videoModalPlayer) {
-      videoModalPlayer.pause();
-    }
-    if (videoModalIframe) {
-      videoModalIframe.src = '';
-    }
   }
 
-  if (videoModalClose) videoModalClose.addEventListener('click', closeVideoModal);
-  if (videoModalBackdrop) videoModalBackdrop.addEventListener('click', closeVideoModal);
+  if (modalClose) modalClose.addEventListener('click', closeVideoModal);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeVideoModal);
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && videoModal && videoModal.classList.contains('is-open')) {
-      closeVideoModal();
-    }
-  });
-
-  // Hero "Tanıtım Videosunu İzle" butonu
-  var heroWatchBtn = document.getElementById('hero-watch-film-btn');
-  if (heroWatchBtn) {
-    heroWatchBtn.addEventListener('click', function () {
-      var cinemaSection = document.getElementById('sinema-bolumu');
-      if (cinemaSection) {
-        cinemaSection.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(function () {
-          if (cinemaBigPlay) cinemaBigPlay.click();
-        }, 600);
-      } else {
-        openVideoModal('videos/tanitim-filmi.mp4', 'Messina Home 2026 Tanıtım Filmi', 'İnegöl Showroom ve Tasarım Koleksiyonu');
-      }
-    });
-  }
-
-  // ---------- 8.5 Modal Tetikleyicisi ----------
-  var cinemaModalTrigger = document.getElementById('cinema-modal-trigger');
-  if (cinemaModalTrigger) {
-    cinemaModalTrigger.addEventListener('click', function () {
-      var src = 'videos/showroom-video.mp4';
-      var title = 'Messina Home Showroom & Tasarım Tanıtımı';
-      var desc = 'Modern hatlar, lüks dokular ve konfor odaklı salon takımlarının sinematik detayları.';
-      openVideoModal(src, title, desc);
-    });
-  }
-
-  // Kategori kartlarındaki video rozetleri tıklaması
   document.querySelectorAll('.video-pill-badge').forEach(function (badge) {
     badge.addEventListener('click', function (e) {
       e.preventDefault();
@@ -457,7 +652,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ---------- 9. Kaydırınca Beliren Öğeler (IntersectionObserver) ----------
+  // ---------- 10. Kaydırınca Beliren Öğeler (IntersectionObserver) ----------
   var revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length) {
     if ('IntersectionObserver' in window && !reduceMotion) {
@@ -475,7 +670,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ---------- 10. İletişim Formu -> WhatsApp Yönlendirmesi ----------
+  // ---------- 11. İletişim Formu -> WhatsApp Yönlendirmesi ----------
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -484,9 +679,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var phone = document.getElementById('cf-phone').value.trim();
       var message = document.getElementById('cf-message').value.trim();
 
-      var text = 'Merhaba Messina Home, ben ' + name + '.';
-      if (phone) text += ' Telefon: ' + phone + '.';
-      if (message) text += ' Mesajım: ' + message;
+      var text = currentLang === 'en'
+        ? ('Hello Messina Home, my name is ' + name + '.' + (phone ? ' Phone: ' + phone + '.' : '') + (message ? ' Message: ' + message : ''))
+        : ('Merhaba Messina Home, ben ' + name + '.' + (phone ? ' Telefon: ' + phone + '.' : '') + (message ? ' Mesajım: ' + message : ''));
 
       var waNumber = '905050332457';
       var url = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(text);
@@ -494,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---------- 11. Lüks Özel Mouse İmleci (Custom Luxury Cursor) ----------
+  // ---------- 12. Lüks Özel Mouse İmleci ----------
   var cursorDot = document.getElementById('cursor-dot');
   var cursorRing = document.getElementById('cursor-ring');
 
@@ -516,8 +711,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     requestAnimationFrame(animateCursorRing);
 
-    // Hover etkileri (Linkler, Butonlar, Kartlar, Giriş Alanları, Videolar)
-    var interactiveEls = document.querySelectorAll('a, button, input, textarea, select, .car-card, .smart-card, .info-item, .m-badge-item, .cinema-player-card, .mag-media, .hero-clean-tag, .hero-ctrl-btn, .cinema-ctrl-btn, .cinema-big-play-btn');
+    var interactiveEls = document.querySelectorAll('a, button, input, textarea, select, .car-card, .smart-card, .info-item, .m-badge-item, .cinema-player-card, .mag-media, .hero-clean-tag, .hero-ctrl-btn, .cinema-ctrl-btn, .cinema-big-play-btn, .lang-btn, .lang-item, .quick-tag');
     interactiveEls.forEach(function (el) {
       el.addEventListener('mouseenter', function () {
         cursorRing.classList.add('cursor-hover');
