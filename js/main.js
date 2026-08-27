@@ -447,35 +447,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  var storesModal = document.getElementById('stores-modal');
-  var closeStoresBtn = document.getElementById('stores-modal-close');
-  var storesBackdrop = document.getElementById('stores-modal-backdrop');
-
-  function openStores(e) {
-    if (e) e.preventDefault();
-    if (storesModal) {
-      storesModal.classList.add('active');
-      storesModal.setAttribute('aria-hidden', 'false');
-    }
-  }
-
-  function closeStores() {
-    if (storesModal) {
-      storesModal.classList.remove('active');
-      storesModal.setAttribute('aria-hidden', 'true');
-    }
-  }
-
-  document.querySelectorAll('.open-stores-btn').forEach(function (btn) {
-    btn.addEventListener('click', openStores);
-  });
-  if (closeStoresBtn) closeStoresBtn.addEventListener('click', closeStores);
-  if (storesBackdrop) storesBackdrop.addEventListener('click', closeStores);
-
   window.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       closeSearch();
-      closeStores();
       if (drawer) drawer.classList.remove('open');
       var videoModal = document.getElementById('video-modal');
       if (videoModal && videoModal.classList.contains('active')) {
@@ -485,6 +459,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+
 
   // ---------- 6. Footer Yılı ----------
   var yearEl = document.getElementById('year');
@@ -689,46 +664,61 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---------- 12. Lüks Özel Mouse İmleci ----------
-  var cursorDot = document.getElementById('cursor-dot');
-  var cursorRing = document.getElementById('cursor-ring');
+  // ---------- Sayfa Açılış Fade-In ----------
+  var reduceMotion = false;
+  try {
+    reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  } catch(e) {
+    reduceMotion = false;
+  }
+  document.body.classList.add('is-loaded');
 
-  if (cursorDot && cursorRing && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    var mouseX = -100, mouseY = -100;
-    var ringX = -100, ringY = -100;
 
-    window.addEventListener('mousemove', function (e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorDot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px) translate(-50%, -50%)';
-    });
-
-    function animateCursorRing() {
-      ringX += (mouseX - ringX) * 0.16;
-      ringY += (mouseY - ringY) * 0.16;
-      cursorRing.style.transform = 'translate(' + ringX + 'px, ' + ringY + 'px) translate(-50%, -50%)';
-      requestAnimationFrame(animateCursorRing);
+  // ---------- Parallax Efekti ----------
+  var parallaxEls = document.querySelectorAll('[data-parallax]');
+  if (parallaxEls.length && !reduceMotion) {
+    var isTicking = false;
+    function updateParallax() {
+      var scrollY = window.pageYOffset || 0;
+      var windowH = window.innerHeight;
+      parallaxEls.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        var elTop = rect.top + scrollY;
+        var elH = rect.height;
+        if (scrollY + windowH > elTop && scrollY < elTop + elH + windowH) {
+          var factor = parseFloat(el.getAttribute('data-parallax')) || 0.04;
+          var relY = (scrollY + windowH * 0.5) - (elTop + elH * 0.5);
+          el.style.transform = 'translate3d(0,' + (relY * factor).toFixed(1) + 'px,0)';
+        }
+      });
+      isTicking = false;
     }
-    requestAnimationFrame(animateCursorRing);
+    window.addEventListener('scroll', function () {
+      if (!isTicking) {
+        requestAnimationFrame(updateParallax);
+        isTicking = true;
+      }
+    }, { passive: true });
+    updateParallax();
+  }
 
-    var interactiveEls = document.querySelectorAll('a, button, input, textarea, select, .car-card, .smart-card, .info-item, .m-badge-item, .cinema-player-card, .mag-media, .hero-clean-tag, .hero-ctrl-btn, .cinema-ctrl-btn, .cinema-big-play-btn, .lang-btn, .lang-item, .quick-tag');
-    interactiveEls.forEach(function (el) {
-      el.addEventListener('mouseenter', function () {
-        cursorRing.classList.add('cursor-hover');
+  // ---------- 3D Kart Tilt Efekti ----------
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
+    document.querySelectorAll('.car-card, .m-badge-item, .feature, .arch-card, .smart-card').forEach(function (card) {
+      card.classList.add('tilt-card');
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var rotX = ((e.clientY - rect.top - rect.height / 2) / rect.height * 2) * -3;
+        var rotY = ((e.clientX - rect.left - rect.width / 2) / rect.width * 2) * 3;
+        card.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg) translateY(-4px)';
       });
-      el.addEventListener('mouseleave', function () {
-        cursorRing.classList.remove('cursor-hover');
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
       });
-    });
-
-    document.addEventListener('mouseleave', function () {
-      cursorDot.style.opacity = '0';
-      cursorRing.style.opacity = '0';
-    });
-    document.addEventListener('mouseenter', function () {
-      cursorDot.style.opacity = '1';
-      cursorRing.style.opacity = '1';
     });
   }
 
 });
+
+
+
