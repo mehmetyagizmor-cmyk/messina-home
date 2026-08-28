@@ -5,271 +5,394 @@
 // ---------- 1. Çeviri Sözlüğü (i18n Dictionary) ----------
 var translations = {
   tr: {
-    top_career: "KARİYER",
-    top_stores: "ATÖLYEMİZ",
+    // Üst Çubuk & Arama
     top_search: "ARA",
-    search_placeholder: "Model, kategori veya kumaş arayın... (Örn: Köşe, Kanepe, Berjer)",
-    search_popular: "Popüler Aramalar:",
-    search_no_res: "Sonuç bulunamadı. Lütfen farklı bir arama terimi deneyin.",
+    top_stores: "ATÖLYEMİZ",
+    search_placeholder: "Model, kumaş veya renk arayın... (Örn: Yıldız, Nirvana, Versace, Golf, Viyana)",
+    search_popular: "Popüler Modeller:",
+    search_no_res: "Sonuç bulunamadı. Lütfen model adı veya kategori deneyin.",
+
+    // Navigasyon
     nav_home: "ANA SAYFA",
     nav_collection: "KOLEKSİYON",
     nav_about: "HAKKIMIZDA",
     nav_contact: "İLETİŞİM",
-    nav_stores: "MAĞAZALAR",
-    nav_cat_corner: "Köşe Koltuk Grubu",
-    nav_cat_sofa: "Kanepe / Üçlü Koltuk",
-    nav_cat_armchair: "Berjer Koltuk",
-    nav_cat_sofabed: "Yataklı Koltuk (Çekyat)",
-    nav_cat_chair_pouf: "Sandalye & Puf",
-    nav_cat_custom: "Özel Tasarım",
-    hero_tag: "Messina Home · 2026 Koleksiyon & Atölye Turu",
+    nav_model_yildiz: "Yıldız Koltuk Takımı",
+    nav_model_nirvana: "Nirvana Koltuk Takımı",
+    nav_model_golf: "Golf Koltuk Takımı",
+    nav_model_versace: "Versace Koltuk Takımı",
+    nav_model_viyana: "Viyana Koltuk Takımı",
+    nav_wa_btn: "WhatsApp İletişim",
+
+    // Hero
     hero_pause: "Durdur",
     hero_play: "Oynat",
     hero_mute: "Ses Aç",
     hero_unmute: "Sesi Kapat",
     hero_scroll: "Keşfetmek İçin Kaydırın",
+
+    // Manifesto
     manifesto_eyebrow: "Zamansız Tasarım · İnegöl Zanaatı",
     manifesto_h1: "Konfor ve Zarafetin Sanata Dönüştüğü Yer",
-    manifesto_lead: "Saloni çizgilerini aratmayan modern estetik; İnegöl'ün usta el işçiliği ve birinci sınıf dokuma kumaşlarıyla yaşam alanlarınıza lüks ve zamansız bir atmosfer katıyor.",
+    manifesto_lead: "Modern estetik, birinci sınıf dokuma kumaşlar ve İnegöl'ün usta el işçiliğiyle hazırlanan 2026 koltuk takımı koleksiyonumuz yaşam alanlarınıza değer katıyor.",
     manifesto_btn_explore: "Koleksiyonu Keşfet",
     manifesto_btn_wa: "WhatsApp Katalog & Fiyat",
+
+    // Rozetler
     badge_producer_title: "İnegöl Üretici Güvencesi",
     badge_producer_desc: "Doğrudan atölyeden birinci sınıf malzeme",
     badge_custom_title: "Kişiye Özel Ölçü & Kumaş",
     badge_custom_desc: "Mekanınıza göre sınırsız renk ve doku",
     badge_delivery_title: "Türkiye Geneli Teslimat",
     badge_delivery_desc: "Güvenli paketleme ve eve teslim kurulum",
-    sec_collection_eyebrow: "Öne Çıkanlar",
-    sec_collection_title: "2026 Koltuk Koleksiyonu",
-    sec_collection_desc: "Modern çizgiler, ergonomik sırt destekleri ve silinebilir lüks dokuma kumaşlarla evinize şıklık katın.",
-    sec_cinema_eyebrow: "Sinematik Deneyim",
-    sec_cinema_title: "Yaşam Alanınızda İnegöl Ustalığı",
-    sec_cinema_desc: "Her dikişinde zarafet, her detayında konfor. Messina Home dünyasını keşfedin.",
-    sec_showcase_eyebrow: "Mimari Vizyon",
-    sec_showcase_title: "Mekanlara Özel Tasarım & Üretim",
-    sec_showcase_desc: "Evinizin ölçülerine ve zevkinize özel kişiselleştirilmiş mobilya çözümleri.",
+
+    // Öne Çıkanlar / Karusel
+    sec_collection_eyebrow: "2026 Koleksiyonu",
+    sec_collection_title: "Öne Çıkan Koltuk Takımlarımız",
+    btn_view_model: "Modeli İncele",
+    card_yildiz_title: "YILDIZ Koltuk Takımı",
+    card_yildiz_desc: "Doğal ahşap kol detayları ve yatak mekanizması.",
+    card_nirvana_title: "NIRVANA Koltuk Takımı",
+    card_nirvana_desc: "Kapitone chester el işçiliği ve nubuk doku.",
+    card_golf_title: "GOLF Koltuk Takımı",
+    card_golf_desc: "Kavisli kol ergonomisi ve yüksek sırt berjer.",
+    card_versace_title: "VERSACE Koltuk Takımı",
+    card_versace_desc: "Altın metal ayaklar ve lüks kadife dikişler.",
+    card_viyana_title: "VIYANA Koltuk Takımı",
+    card_viyana_desc: "Gold çerçeveli zarif hatlar ve şık tasarım.",
+
+    // Neden Biz
     sec_why_eyebrow: "Neden Messina Home?",
-    sec_why_title: "Konforun ve Kalitenin Farkı",
-    sec_why_desc: "Yılların getirdiği mobilya zanaatını modern tasarım anlayışıyla harmanlıyoruz.",
-    cat_corner_title: "Köşe Koltuk Grubu",
-    cat_corner_desc: "Geniş oturum, modüler yerleşim ve pürüzsüz dokuma kumaş kalitesi.",
-    cat_sofa_title: "Kanepe & Üçlü Koltuk",
-    cat_sofa_desc: "Zarif hatlar, yüksek ayak tasarımı ve birinci sınıf sünger konforu.",
-    cat_armchair_title: "Berjer Koltuk",
-    cat_armchair_desc: "Okuma köşeleriniz ve dinlenme anlarınız için şık tamamlayıcı.",
-    cat_sofabed_title: "Yataklı Koltuk (Çekyat)",
-    cat_sofabed_desc: "Kolay açılır mekanizma, ekstra saklama sandığı ve üstün uyku rahatlığı.",
-    cat_chair_pouf_title: "Sandalye & Puf",
-    cat_chair_pouf_desc: "Yemek ve salon alanlarınızı tamamlayan ergonomik formlar.",
-    cat_custom_title: "Kişiye Özel Tasarım",
-    cat_custom_desc: "Ölçünüze, salonunuza ve kumaş seçiminize özel butik üretim.",
-    btn_details: "Detayları İncele",
-    btn_all_products: "Tüm Ürünleri İncele",
-    badge_rep: "Temsili Görsel",
-    about_eyebrow: "Bizi Tanıyın",
-    about_title: "İnegöl'den Dünyaya Uzanan Konfor",
-    about_lead: "Messina Home olarak Bursa İnegöl'de başlayan mobilya yolculuğumuzda, modern çizgileri usta el işçiliğiyle buluşturuyoruz.",
-    about_card1_title: "Birinci Sınıf İskelet & Sünger",
-    about_card1_desc: "Fırınlanmış gürgen ağacı iskelet ve 35 dansite HR sünger ile uzun ömürlü dayanıklılık.",
-    about_card2_title: "Leke Tutmaz Lüks Kumaşlar",
-    about_card2_desc: "Kolay temizlenebilir keten, kadife, bukle ve nubuk dokular.",
-    about_card3_title: "Kişiye Özel Çözümler",
-    about_card3_desc: "Salonunuzun santimetresine göre modüler üretim ve renk uyumu.",
-    about_history_title: "Hikayemiz",
-    about_history_p1: "Mobilyanın başkenti İnegöl'de kurulan atölyemizde, her koltuğu bir sanat eseri özeniyle üretiyoruz.",
-    about_history_p2: "Amacımız sadece bir oturma grubu sunmak değil, aileniz ve sevdiklerinizle en güzel anıları paylaşacağınız sıcak ve lüks bir yaşam alanı yaratmaktır.",
-    contact_eyebrow: "Bize Ulaşın",
-    contact_title: "Sorularınız İçin Bize Ulaşın, Size Yardımcı Olmaktan Mutluluk Duyarız",
-    contact_lead: "Koltuk modellerimiz, kumaş kartelalarımız ve özel ölçü talepleriniz için bize ulaşın.",
-    contact_address_title: "Adresimiz",
-    contact_address_val: "Ertuğrulgazi Cad. Mobilya Vadisi, İnegöl / Bursa",
-    contact_phone_title: "Telefon & WhatsApp",
+    sec_why_title: "Kalite ve Güveni Bir Arada Sunuyoruz",
+    why_1_title: "Kaliteli Malzeme",
+    why_1_desc: "Fırınlanmış masif gürgen ağacı ve 35 DNS HR sünger ile üretilen dayanıklı iskelet yapısı.",
+    why_2_title: "Özenli Seçki",
+    why_2_desc: "Her modelde konfor, silinebilir lüks kumaş dokusu ve zamansız estetik.",
+    why_3_title: "Bursa İnegöl'de",
+    why_3_desc: "Mobilyanın kalbinde doğrudan üretici avantajı; ürünleri yerinde inceleyebilirsiniz.",
+    why_4_title: "Kolay İletişim",
+    why_4_desc: "WhatsApp üzerinden hızlıca fiyat alabilir, kumaş ve ölçü taleplerinizi iletebilirsiniz.",
+
+    // CTA Bantları
+    cta_eyebrow: "Bize Ulaşın",
+    cta_title: "Hayalinizdeki Koltuğu Birlikte Bulalım",
+    cta_lead: "Sorularınız için WhatsApp üzerinden yazabilir ya da İnegöl'deki mağazamızı ziyaret edebilirsiniz.",
+    btn_wa_write: "WhatsApp'tan Yazın",
+    btn_contact_info: "İletişim Bilgileri",
+    btn_visit_workshop: "Atölyemizi Ziyaret Edin",
+
+    // Ürünler Sayfası
+    prod_hero_eyebrow: "2026 Koleksiyonu",
+    prod_hero_title: "Koltuk Takımı Koleksiyonumuz",
+    prod_zoom_hint: "Büyüt",
+    prod_specs_title: "Teknik Ölçüler (Genişlik / Derinlik / Yükseklik)",
+    spec_3str_label: "3'lü Koltuk (3 str)",
+    spec_bergere_label: "Berjer (Bergere)",
+    spec_feat_bed: "Açılır Yatak Mekanizması",
+    spec_feat_wood_arm: "Masif Ahşap Kolçak",
+    spec_feat_foam: "35 DNS HR Sünger",
+    spec_feat_clean_fabric: "Silinebilir Kumaş",
+    spec_feat_chester: "Kapitone Chester İşçilik",
+    spec_feat_back_bed: "Geriye Açılır Yatak Sistemi",
+    spec_feat_colors_taba: "Lüks Hardal & Taba Renkler",
+    spec_feat_hornbeam: "Fırınlanmış Masif Gürgen",
+    spec_feat_curved_arm: "Kavisli Modern Kol Tasarımı",
+    spec_feat_high_back: "Yüksek Sırtlı Berjer Konforu",
+    spec_feat_dual_color: "Çift Renk Kombin Seçeneği",
+    spec_feat_sofabed_opt: "Yataklı Mekanizma Opsiyonu",
+    spec_feat_gold_legs: "Pirinç / Altın Metal Ayaklar",
+    spec_feat_velvet: "Lüks Kadife & İpek Doku",
+    spec_feat_wide_bed: "Geniş Açılır Yatak Alanı",
+    spec_feat_versace_buckle: "Özel Versace Toka Detayları",
+    spec_feat_gold_frame: "Altın Çerçeve & Ayak Tasarımı",
+    spec_feat_contrast: "Kontrast Siyah / Krem Şıklığı",
+    spec_feat_sculpt_bergere: "Heykelsi Özel Berjer Sırtı",
+    prod_btn_wa_order: "WhatsApp'tan Fiyat & Sipariş",
+    prod_yildiz_desc: "Doğal masif ahşap kol ve ayak detaylarıyla zenginleştirilmiş, ergonomik sırt minderleri ve yatak fonksiyonu ile modern yaşam alanları için mükemmel konfor.",
+    prod_nirvana_desc: "Zengin kapitone chester el dikişleri, asil nubuk ve deri dokulu kumaş kartelası ve lüks ahşap baza detaylarıyla salonunuza prestij katan ayrıcalıklı bir takım.",
+    prod_golf_desc: "Dikey boğumlu modern dikiş yapısı, kavisli ergonomik kol formu ve yüksek sırtlı konfor berjeri ile hem estetik hem de eşsiz bir oturum ergonomisi sunar.",
+    prod_versace_desc: "Işıltılı altın metal ayaklar, lüks mürdüm ve pudra kadife dokular, zengin biye dikişleri ve derin oturum rahatlığıyla saray zarafetini modern salonlara taşıyor.",
+    prod_viyana_desc: "Siyah ve krem rengin kusursuz altın bordürlerle dansı. Heykelsi berjer sırt formu, özel tasarım dikey nervür dikişler ve yatak olabilme fonksiyonu.",
+    prod_custom_eyebrow: "Özel Ölçü & Kumaş Seçenekleri",
+    prod_custom_title: "Evinize ve Zevkinize Özel Üretim",
+    prod_custom_lead: "Tüm modellerimizde dilediğiniz renk, kumaş dokusu ve salonunuza uygun ölçü değişiklikleri yapılmaktadır.",
+
+    // Hakkımızda Sayfası
+    about_hero_eyebrow: "Bizi Tanıyın",
+    about_hero_title: "Hakkımızda",
+    about_story_eyebrow: "Hikayemiz",
+    about_story_title: "Konforu ve Zarafeti Evinize Taşıyoruz",
+    about_story_p1: "Messina Home olarak, mobilyanın başkenti Bursa İnegöl'de oturma alanlarınıza değer katan lüks koltuk takımları üretiyoruz.",
+    about_story_p2: "Yıldız, Nirvana, Golf, Versace ve Viyana gibi özgün koleksiyonlarımızla; fırınlanmış masif gürgen ağacı iskelet, 35 DNS HR yüksek konforlu süngerler ve kolay temizlenebilir silinebilir kumaşları titizlikle bir araya getiriyoruz.",
+    about_val_eyebrow: "Değerlerimiz",
+    about_val_title: "Bizi Farklı Kılan Nedir?",
+    val_1_title: "Güvenilirlik & Zanaat",
+    val_1_desc: "Söz verdiğimiz kalitede ürünü, usta el işçiliği ve birinci sınıf malzeme güvencesiyle sunarız.",
+    val_2_title: "Müşteri Odaklılık",
+    val_2_desc: "Her müşterimizin yaşam alanına özel ölçü, renk kombinasyonu ve modüler çözümler üretiriz.",
+    val_3_title: "Kalite Kontrolü",
+    val_3_desc: "Atölyemizden çıkan her iskeleti, dikişi, süngeri ve mekanizmayı titizlikle test ederiz.",
+    badge_atelier_label: "İnegöl Atölyesi",
+
+    // İletişim Sayfası
+    contact_page_eyebrow: "Bize Ulaşın",
+    contact_page_title: "İletişim ve Atölye Bilgilerimiz",
+    contact_info_eyebrow: "İletişim Bilgileri",
+    contact_info_title: "Size Yardımcı Olmaktan Mutluluk Duyarız",
+    contact_info_desc: "Modellerimiz, teknik ölçüler, özel kumaş seçenekleri veya fiyat teklifi almak için dilediğiniz zaman bize ulaşabilirsiniz.",
+    contact_phone_title: "WhatsApp / Telefon",
+    contact_address_title: "Atölye & Mağaza Adresi",
+    contact_address_val: "Mahmudiye Mah. 27. Mobilya Sk. No: 60 İnegöl / Bursa",
     contact_hours_title: "Çalışma Saatleri",
-    contact_hours_val: "Pazartesi – Cumartesi: 09:00 – 19:30 | Pazar: 11:00 – 18:00",
-    contact_form_title: "Bize Mesaj Gönderin",
-    contact_form_name: "Adınız Soyadınız",
-    contact_form_phone: "Telefon Numaranız",
-    contact_form_message: "Mesajınız / İlgilendiğiniz Ürün",
-    contact_form_btn: "WhatsApp Üzerinden Gönder",
-    contact_form_note: "Form gönderildiğinde doğrudan WhatsApp açılacak ve mesajınız iletilecektir.",
+    contact_hours_val: "Pazartesi – Cuma: 08:00 – 19:00",
+    contact_social_title: "Instagram & E-posta",
+    contact_form_eyebrow: "Mesaj Gönderin",
+    contact_form_title: "Bize Yazın",
+    contact_form_desc: "Formu doldurduğunuzda mesajınız WhatsApp üzerinden doğrudan bize iletilecektir.",
+    form_label_name: "Ad Soyad",
+    form_placeholder_name: "Adınız Soyadınız",
+    form_label_phone: "Telefon",
+    form_placeholder_phone: "05xx xxx xx xx",
+    form_label_msg: "Mesajınız / İlgilendiğiniz Model",
+    form_placeholder_msg: "Yıldız, Nirvana, Golf, Versace veya Viyana modelleri ve özel ölçü taleplerinizi yazabilirsiniz...",
+    form_btn_send: "WhatsApp ile Gönder",
+    form_note: "Gönder butonuna bastığınızda WhatsApp açılır ve mesajınız hazır şekilde iletilir.",
+
+    // Footer
     footer_tagline: "Bursa İnegöl'de modern tasarım ve usta el işçiliğiyle üretilen lüks koltuk takımları.",
-    footer_quick_links: "Hızlı Bağlantılar",
-    footer_categories: "Koleksiyonlar",
-    footer_contact: "İletişim & Konum",
+    footer_quick_links: "Koleksiyonlar",
+    footer_contact_title: "İletişim & Adres",
     footer_rights: "Tüm hakları saklıdır. Bursa / İnegöl."
   },
   en: {
-    top_career: "CAREER",
-    top_stores: "OUR WORKSHOP",
+    // Top Bar & Search
     top_search: "SEARCH",
-    search_placeholder: "Search for models, categories or fabrics... (e.g. Corner, Sofa, Armchair)",
-    search_popular: "Popular Searches:",
-    search_no_res: "No results found. Please try another search term.",
+    top_stores: "OUR WORKSHOP",
+    search_placeholder: "Search for models, fabrics or colors... (e.g. Yildiz, Nirvana, Versace, Golf, Viyana)",
+    search_popular: "Popular Models:",
+    search_no_res: "No results found. Please try another model name.",
+
+    // Navigation
     nav_home: "HOME",
     nav_collection: "COLLECTION",
     nav_about: "ABOUT US",
     nav_contact: "CONTACT",
-    nav_stores: "STORES",
-    nav_cat_corner: "Corner Sofa Sets",
-    nav_cat_sofa: "Sofa / 3-Seater Couch",
-    nav_cat_armchair: "Armchair & Accent Chairs",
-    nav_cat_sofabed: "Convertible Sofa Beds",
-    nav_cat_chair_pouf: "Chairs & Poufs",
-    nav_cat_custom: "Bespoke Custom Design",
-    hero_tag: "Messina Home · 2026 Collection & Workshop Tour",
+    nav_model_yildiz: "Yildiz Sofa Set",
+    nav_model_nirvana: "Nirvana Sofa Set",
+    nav_model_golf: "Golf Sofa Set",
+    nav_model_versace: "Versace Sofa Set",
+    nav_model_viyana: "Viyana Sofa Set",
+    nav_wa_btn: "WhatsApp Contact",
+
+    // Hero
     hero_pause: "Pause",
     hero_play: "Play",
     hero_mute: "Unmute",
     hero_unmute: "Mute",
     hero_scroll: "Scroll to Discover",
+
+    // Manifesto
     manifesto_eyebrow: "Timeless Design · İnegöl Craftsmanship",
     manifesto_h1: "Where Comfort and Elegance Turn Into Art",
-    manifesto_lead: "Contemporary aesthetics rivaling leading luxury European brands; bringing timeless warmth to your living spaces with master craftsmanship and premium woven fabrics from İnegöl.",
+    manifesto_lead: "Elevate your living spaces with our 2026 luxury sofa set collection, crafted with contemporary aesthetics, premium upholstery fabrics, and master handcraft in İnegöl.",
     manifesto_btn_explore: "Explore Collection",
     manifesto_btn_wa: "WhatsApp Catalog & Pricing",
+
+    // Badges
     badge_producer_title: "Direct Producer Guarantee",
     badge_producer_desc: "First-class materials crafted directly in our atelier",
     badge_custom_title: "Custom Dimensions & Fabrics",
     badge_custom_desc: "Unlimited texture and color choices tailored to your space",
     badge_delivery_title: "Worldwide & Nationwide Delivery",
     badge_delivery_desc: "Secure packing and direct white-glove delivery",
-    sec_collection_eyebrow: "Featured Picks",
-    sec_collection_title: "2026 Sofa Collection",
-    sec_collection_desc: "Elevate your home with modern silhouettes, ergonomic back support, and easy-to-clean luxury fabrics.",
-    sec_cinema_eyebrow: "Cinematic Experience",
-    sec_cinema_title: "İnegöl Mastery in Your Living Room",
-    sec_cinema_desc: "Elegance in every stitch, pure comfort in every detail. Step inside the Messina Home world.",
-    sec_showcase_eyebrow: "Architectural Vision",
-    sec_showcase_title: "Bespoke Furniture for Distinct Spaces",
-    sec_showcase_desc: "Personalized furniture solutions customized to your room dimensions and refined taste.",
+
+    // Featured / Carousel
+    sec_collection_eyebrow: "2026 Collection",
+    sec_collection_title: "Featured Luxury Sofa Sets",
+    btn_view_model: "View Model",
+    card_yildiz_title: "YILDIZ Sofa Set",
+    card_yildiz_desc: "Natural wood arm accents & convertible bed mechanism.",
+    card_nirvana_title: "NIRVANA Sofa Set",
+    card_nirvana_desc: "Tufted chester craftsmanship & luxury nubuck texture.",
+    card_golf_title: "GOLF Sofa Set",
+    card_golf_desc: "Curved arm ergonomics & high-back armchair comfort.",
+    card_versace_title: "VERSACE Sofa Set",
+    card_versace_desc: "Gold metal legs & royal plum velvet stitching.",
+    card_viyana_title: "VIYANA Sofa Set",
+    card_viyana_desc: "Gold-framed contours & black/cream contrast style.",
+
+    // Why Us
     sec_why_eyebrow: "Why Messina Home?",
-    sec_why_title: "The Difference of Craft and Comfort",
-    sec_why_desc: "Blending decades of furniture craftsmanship with contemporary architectural sensibilities.",
-    cat_corner_title: "Corner Sofa Sets",
-    cat_corner_desc: "Spacious seating, modular layouts, and ultra-durable luxury woven textures.",
-    cat_sofa_title: "Sofas & Couches",
-    cat_sofa_desc: "Sculptural profiles, elevated metal/wood legs, and high-resilience foam comfort.",
-    cat_armchair_title: "Accent & Lounge Armchairs",
-    cat_armchair_desc: "The perfect companion for your reading nooks and cozy lounging hours.",
-    cat_sofabed_title: "Convertible Sofa Beds",
-    cat_sofabed_desc: "Effortless opening mechanism, generous hidden storage, and superior sleeping comfort.",
-    cat_chair_pouf_title: "Dining Chairs & Poufs",
-    cat_chair_pouf_desc: "Ergonomic seating companions that complete your dining and living spaces.",
-    cat_custom_title: "Bespoke Custom Furniture",
-    cat_custom_desc: "Tailor-made production according to your architectural floor plan and fabric selection.",
-    btn_details: "View Details",
-    btn_all_products: "View All Products",
-    badge_rep: "Showcase Visual",
-    about_eyebrow: "About Us",
-    about_title: "Comfort Reaching from İnegöl to the World",
-    about_lead: "Starting our furniture journey in Bursa İnegöl, we bring together contemporary design lines with timeless artisanal handcraft.",
-    about_card1_title: "Kiln-Dried Hornbeam & Premium Foam",
-    about_card1_desc: "Kiln-dried solid hornbeam frames paired with 35 DNS HR foam for decades of enduring durability.",
-    about_card2_title: "Stain-Resistant Luxury Fabrics",
-    about_card2_desc: "Easy-care linens, velvets, boucle, and nubuck textiles in rich bespoke palettes.",
-    about_card3_title: "Customized Architectural Solutions",
-    about_card3_desc: "Modular tailoring to the exact centimeters of your living room.",
-    about_history_title: "Our Story",
-    about_history_p1: "Founded in İnegöl, Turkey's furniture capital, we craft each sofa with the meticulous care of an art piece.",
-    about_history_p2: "Our purpose is not merely to build furniture, but to create a warm, luxurious haven where you share life's finest memories.",
-    contact_eyebrow: "Contact Us",
-    contact_title: "Reach Out With Any Questions — We'd Love to Help",
-    contact_lead: "Get in touch for our sofa collections, fabric swatches, or custom dimension consultations.",
-    contact_address_title: "Our Address",
-    contact_address_val: "Ertugrulgazi St. Furniture Valley, Inegol / Bursa, Turkey",
-    contact_phone_title: "Phone & WhatsApp",
+    sec_why_title: "Delivering Quality & Trust Together",
+    why_1_title: "Premium Materials",
+    why_1_desc: "Built with kiln-dried solid hornbeam frames and 35 DNS HR high-resilience foam for lasting endurance.",
+    why_2_title: "Curated Selection",
+    why_2_desc: "Supreme ergonomics, easy-care luxury fabrics, and timeless aesthetics in every piece.",
+    why_3_title: "In Bursa İnegöl",
+    why_3_desc: "Direct producer advantages in the heart of Turkish furniture manufacturing.",
+    why_4_title: "Easy Communication",
+    why_4_desc: "Instant pricing, fabric samples, and bespoke requests via direct WhatsApp line.",
+
+    // CTA Bands
+    cta_eyebrow: "Contact Us",
+    cta_title: "Let's Find Your Dream Sofa Together",
+    cta_lead: "Reach out via WhatsApp or visit our workshop in İnegöl for questions and quotes.",
+    btn_wa_write: "Write on WhatsApp",
+    btn_contact_info: "Contact Details",
+    btn_visit_workshop: "Visit Our Workshop",
+
+    // Products Page
+    prod_hero_eyebrow: "2026 Collection",
+    prod_hero_title: "Our Sofa Set Collection",
+    prod_zoom_hint: "Zoom",
+    prod_specs_title: "Technical Dimensions (Width / Depth / Height)",
+    spec_3str_label: "3-Seater Sofa (3 str)",
+    spec_bergere_label: "Armchair (Bergere)",
+    spec_feat_bed: "Convertible Bed Mechanism",
+    spec_feat_wood_arm: "Solid Wood Armrest",
+    spec_feat_foam: "35 DNS HR Foam",
+    spec_feat_clean_fabric: "Easy-Clean Fabric",
+    spec_feat_chester: "Tufted Chester Craft",
+    spec_feat_back_bed: "Back-Fold Bed System",
+    spec_feat_colors_taba: "Mustard & Tan Palette",
+    spec_feat_hornbeam: "Kiln-Dried Hornbeam Frame",
+    spec_feat_curved_arm: "Curved Modern Arm Design",
+    spec_feat_high_back: "High-Back Ergonomic Armchair",
+    spec_feat_dual_color: "Dual-Tone Color Option",
+    spec_feat_sofabed_opt: "Convertible Bed Option",
+    spec_feat_gold_legs: "Brass / Gold Metal Legs",
+    spec_feat_velvet: "Luxury Velvet & Silk Texture",
+    spec_feat_wide_bed: "Spacious Fold-Out Bed",
+    spec_feat_versace_buckle: "Signature Versace Buckle Accents",
+    spec_feat_gold_frame: "Gold Frame & Leg Design",
+    spec_feat_contrast: "Black & Cream Contrast Elegance",
+    spec_feat_sculpt_bergere: "Sculptural Armchair Back",
+    prod_btn_wa_order: "Get Price & Order on WhatsApp",
+    prod_yildiz_desc: "Enhanced with natural solid wood arm and leg details, ergonomic back cushions, and convertible bed function for supreme modern living comfort.",
+    prod_nirvana_desc: "A prestigious set featuring lavish tufted chester hand-stitching, rich nubuck texture, and elegant wood plinth details that command attention.",
+    prod_golf_desc: "Combining vertical channel stitching, sculptural curved arms, and a high-back ergonomic lounge armchair for unmatched seating posture.",
+    prod_versace_desc: "Gleaming gold metal legs, regal plum & mink velvet textures, and deep seating comfort bringing palace grandeur into contemporary homes.",
+    prod_viyana_desc: "The graceful harmony of black and cream accented by gold borders. Sculptural armchair profile and effortless fold-out bed function.",
+    prod_custom_eyebrow: "Custom Dimensions & Fabrics",
+    prod_custom_title: "Customized Tailoring for Your Home",
+    prod_custom_lead: "All models can be customized in terms of color palette, fabric texture, and exact centimeter dimensions.",
+
+    // About Us Page
+    about_hero_eyebrow: "About Us",
+    about_hero_title: "About Messina Home",
+    about_story_eyebrow: "Our Story",
+    about_story_title: "Bringing Comfort and Elegance into Your Home",
+    about_story_p1: "At Messina Home, based in Bursa İnegöl — Turkey's furniture capital — we manufacture luxury sofa sets that redefine living spaces.",
+    about_story_p2: "Across our original collections like Yildiz, Nirvana, Golf, Versace, and Viyana, we meticulously combine kiln-dried solid hornbeam frames, 35 DNS HR high-resilience foam, and easy-clean stain-resistant fabrics.",
+    about_val_eyebrow: "Our Values",
+    about_val_title: "What Sets Us Apart?",
+    val_1_title: "Trust & Craftsmanship",
+    val_1_desc: "We deliver guaranteed quality through master artisanal handcraft and certified first-class materials.",
+    val_2_title: "Client-Centric Approach",
+    val_2_desc: "We engineer bespoke dimensions, custom upholstery combinations, and modular setups for every client.",
+    val_3_title: "Rigorous Quality Control",
+    val_3_desc: "Every single timber frame, seam, cushion, and bed mechanism is thoroughly tested before leaving our atelier.",
+    badge_atelier_label: "Inegol Workshop",
+
+    // Contact Page
+    contact_page_eyebrow: "Contact Us",
+    contact_page_title: "Contact & Workshop Information",
+    contact_info_eyebrow: "Contact Details",
+    contact_info_title: "We Would Love to Assist You",
+    contact_info_desc: "Get in touch with us anytime for sofa set models, technical measurements, custom upholstery swatches, or price quotations.",
+    contact_phone_title: "WhatsApp / Phone",
+    contact_address_title: "Atelier & Showroom Address",
+    contact_address_val: "Mahmudiye Dist. 27th Mobilya St. No: 60 Inegol / Bursa, Turkey",
     contact_hours_title: "Opening Hours",
-    contact_hours_val: "Monday – Saturday: 09:00 – 19:30 | Sunday: 11:00 – 18:00",
-    contact_form_title: "Send Us a Message",
-    contact_form_name: "Full Name",
-    contact_form_phone: "Phone Number",
-    contact_form_message: "Your Message / Interested Model",
-    contact_form_btn: "Send via WhatsApp",
-    contact_form_note: "Submitting this form will automatically open WhatsApp with your pre-filled inquiry.",
-    footer_tagline: "Luxury sofa collections crafted with modern design and master craftsmanship in Bursa İnegöl.",
-    footer_quick_links: "Quick Links",
-    footer_categories: "Collections",
-    footer_contact: "Contact & Location",
+    contact_hours_val: "Monday – Friday: 08:00 – 19:00",
+    contact_social_title: "Instagram & Email",
+    contact_form_eyebrow: "Send a Message",
+    contact_form_title: "Write to Us",
+    contact_form_desc: "Fill in the form to directly launch WhatsApp with your pre-filled inquiry.",
+    form_label_name: "Full Name",
+    form_placeholder_name: "Your Full Name",
+    form_label_phone: "Phone Number",
+    form_placeholder_phone: "05xx xxx xx xx",
+    form_label_msg: "Your Message / Model of Interest",
+    form_placeholder_msg: "Inquire about Yildiz, Nirvana, Golf, Versace, or Viyana models and custom dimensions...",
+    form_btn_send: "Send via WhatsApp",
+    form_note: "Clicking submit will open WhatsApp with your message ready to send.",
+
+    // Footer
+    footer_tagline: "Luxury sofa sets crafted with modern design and master craftsmanship in Bursa İnegöl, Turkey.",
+    footer_quick_links: "Collections",
+    footer_contact_title: "Contact & Address",
     footer_rights: "All rights reserved. Bursa / İnegöl."
   }
 };
 
+// ---------- 2. Arama Verileri (5 Gerçek Model) ----------
 var searchableItems = [
   {
-    id: "kose-koltuk",
-    title_tr: "Köşe Koltuk Grubu",
-    title_en: "Corner Sofa Sets",
-    desc_tr: "Modüler lüks yerleşim ve geniş oturum",
-    desc_en: "Modular luxury layout & spacious seating",
-    category_tr: "Koleksiyon",
-    category_en: "Collection",
-    url: "urunler.html#kose-koltuk",
-    img: "images/cat-kose-koltuk.jpg",
-    tags: ["köşe", "l koltuk", "corner", "modüler", "kanepe", "oturma grubu", "sectionals"]
+    id: "yildiz",
+    title_tr: "YILDIZ Koltuk Takımı",
+    title_en: "YILDIZ Sofa Set",
+    desc_tr: "Doğal ahşap kol detayları, yatak mekanizması (3'lü: 230×95×70 cm)",
+    desc_en: "Natural wood arm details with bed mechanism (3-str: 230×95×70 cm)",
+    category_tr: "Koltuk Takımı",
+    category_en: "Sofa Set",
+    url: "urunler.html#yildiz",
+    img: "images/models/yildiz-1.jpg",
+    tags: ["yıldız", "yildiz", "koltuk takımı", "yataklı", "ahşap", "sofa set", "3lü", "berjer"]
   },
   {
-    id: "kanepe",
-    title_tr: "Kanepe / Üçlü Koltuk",
-    title_en: "Sofas & Couches",
-    desc_tr: "Zarif siluet ve birinci sınıf sünger konforu",
-    desc_en: "Sculptural profile and premium foam comfort",
-    category_tr: "Koleksiyon",
-    category_en: "Collection",
-    url: "urunler.html#kanepe",
-    img: "images/cat-kanepe.jpg",
-    tags: ["kanepe", "üçlü", "sofa", "couch", "koltuk", "living room"]
+    id: "nirvana",
+    title_tr: "NIRVANA Koltuk Takımı",
+    title_en: "NIRVANA Sofa Set",
+    desc_tr: "Kapitone chester el işçiliği ve nubuk doku (3'lü: 230×97×70 cm)",
+    desc_en: "Chester tufted craftsmanship & nubuck texture (3-str: 230×97×70 cm)",
+    category_tr: "Koltuk Takımı",
+    category_en: "Sofa Set",
+    url: "urunler.html#nirvana",
+    img: "images/models/nirvana-1.jpg",
+    tags: ["nirvana", "kapitone", "chester", "nubuk", "koltuk takımı", "taba", "hardal", "sofa"]
   },
   {
-    id: "berjer",
-    title_tr: "Berjer Koltuk",
-    title_en: "Accent Armchairs",
-    desc_tr: "Okuma ve dinlenme köşeleri için şık berjer",
-    desc_en: "Elegant armchairs for reading and lounge spaces",
-    category_tr: "Koleksiyon",
-    category_en: "Collection",
-    url: "urunler.html#berjer",
-    img: "images/cat-berjer.jpg",
-    tags: ["berjer", "tekli", "armchair", "lounge", "dinlenme"]
+    id: "golf",
+    title_tr: "GOLF Koltuk Takımı",
+    title_en: "GOLF Sofa Set",
+    desc_tr: "Dikey kanal dikişler ve yüksek sırtlı berjer konforu (3'lü: 226×95×70 cm)",
+    desc_en: "Vertical channel stitching and high-back armchair (3-str: 226×95×70 cm)",
+    category_tr: "Koltuk Takımı",
+    category_en: "Sofa Set",
+    url: "urunler.html#golf",
+    img: "images/models/golf-1.jpg",
+    tags: ["golf", "kiremit", "vizon", "koltuk", "berjer", "yüksek sırt", "sofa"]
   },
   {
-    id: "cekyat",
-    title_tr: "Yataklı Koltuk (Çekyat)",
-    title_en: "Convertible Sofa Beds",
-    desc_tr: "Kolay açılır mekanizma ve ekstra sandıklı depolama",
-    desc_en: "Easy fold-out mechanism with hidden storage",
-    category_tr: "Koleksiyon",
-    category_en: "Collection",
-    url: "urunler.html#cekyat",
-    img: "images/cat-cekyat.jpg",
-    tags: ["çekyat", "yataklı", "sofabed", "misafir", "sandıklı"]
+    id: "versace",
+    title_tr: "VERSACE Koltuk Takımı",
+    title_en: "VERSACE Sofa Set",
+    desc_tr: "Altın metal ayaklar, lüks mürdüm kadife kumaş ve yatak (3'lü: 230×97×70 cm)",
+    desc_en: "Gold metal legs, luxury plum velvet & convertible bed (3-str: 230×97×70 cm)",
+    category_tr: "Koltuk Takımı",
+    category_en: "Sofa Set",
+    url: "urunler.html#versace",
+    img: "images/models/versace-1.jpg",
+    tags: ["versace", "gold", "altın", "mürdüm", "kadife", "koltuk takımı", "lüks"]
   },
   {
-    id: "sandalye-puf",
-    title_tr: "Sandalye & Puf",
-    title_en: "Chairs & Poufs",
-    desc_tr: "Yemek odası ve salon tamamlayıcı formlar",
-    desc_en: "Dining chairs & accent poufs",
-    category_tr: "Koleksiyon",
-    category_en: "Collection",
-    url: "urunler.html#sandalye-puf",
-    img: "images/cat-sandalye-puf.jpg",
-    tags: ["sandalye", "puf", "chair", "pouf", "bench", "oturak"]
-  },
-  {
-    id: "ozel-tasarim",
-    title_tr: "Özel Tasarım & Projeler",
-    title_en: "Bespoke Custom Furniture",
-    desc_tr: "Mekanınıza özel santimetre ölçüsünde üretim",
-    desc_en: "Tailor-made production for your architectural project",
-    category_tr: "Projeler",
-    category_en: "Projects",
-    url: "urunler.html#ozel-tasarim",
-    img: "images/cat-ozel-tasarim.jpg",
-    tags: ["özel", "tasarım", "proje", "mimari", "custom", "bespoke", "inegöl"]
+    id: "viyana",
+    title_tr: "VIYANA Koltuk Takımı",
+    title_en: "VIYANA Sofa Set",
+    desc_tr: "Gold metal çerçeve, siyah/krem kontrast şıklığı (3'lü: 228×95×70 cm)",
+    desc_en: "Gold metal framing, black & cream contrast elegance (3-str: 228×95×70 cm)",
+    category_tr: "Koltuk Takımı",
+    category_en: "Sofa Set",
+    url: "urunler.html#viyana",
+    img: "images/models/viyana-1.jpg",
+    tags: ["viyana", "vienna", "siyah", "krem", "gold", "koltuk takımı", "tasarım berjer"]
   }
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.add('js-enabled');
+  document.body.classList.add('is-loaded');
 
   var currentLang = localStorage.getItem('messina_lang') || 'tr';
 
@@ -306,13 +429,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateWhatsAppLinks(lang) {
     var defaultMsg = lang === 'en'
-      ? 'Hello, I would like to get information about Messina Home furniture collection, models and pricing.'
+      ? 'Hello, I would like to get information about Messina Home sofa collections, models and pricing.'
       : 'Merhaba, Messina Home koltuk modelleriniz ve fiyatlar hakkında bilgi almak istiyorum.';
 
     document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
       var href = link.getAttribute('href');
-      var base = href.split('?')[0];
-      link.setAttribute('href', base + '?text=' + encodeURIComponent(defaultMsg));
+      if (!href.includes('text=')) {
+        var base = href.split('?')[0];
+        link.setAttribute('href', base + '?text=' + encodeURIComponent(defaultMsg));
+      }
     });
   }
 
@@ -330,6 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   applyLanguage(currentLang);
 
+  // ---------- Mobil Menü Çekmecesi ----------
   var toggleBtn = document.getElementById('nav-toggle-btn');
   var drawer = document.getElementById('mobile-drawer');
   var drawerClose = document.getElementById('mobile-drawer-close');
@@ -355,6 +481,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---------- Arama Modalı ----------
   var searchModal = document.getElementById('search-modal');
   var openSearchBtn = document.getElementById('open-search-btn');
   var mobileSearchBtn = document.getElementById('mobile-search-btn');
@@ -445,186 +572,38 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape') {
       closeSearch();
       if (drawer) drawer.classList.remove('open');
-      var videoModal = document.getElementById('video-modal');
-      if (videoModal && videoModal.classList.contains('active')) {
-        videoModal.classList.remove('active');
-        var player = document.getElementById('modal-video-player');
-        if (player) player.pause();
+      var lightbox = document.getElementById('image-lightbox-modal');
+      if (lightbox && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
       }
     }
   });
 
-
-  // ---------- 6. Footer Yılı ----------
+  // ---------- Footer Yılı ----------
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ---------- Karusel Kaydırma ----------
+  var carBtnPrev = document.querySelector('.car-btn[data-dir="-1"]');
+  var carBtnNext = document.querySelector('.car-btn[data-dir="1"]');
+  var carTrack = document.querySelector('.carousel-track');
 
-  // ---------- 7. Hero Görsel Karuseli (Fallback) ----------
-  var slides = document.querySelectorAll('.hero-slide');
-  var dots = document.querySelectorAll('.hero-dot');
-  var prevBtn = document.getElementById('hero-prev');
-  var nextBtn = document.getElementById('hero-next');
-  var current = 0;
-  var timer = null;
-
-  function showSlide(index) {
-    if (!slides.length) return;
-    current = (index + slides.length) % slides.length;
-    slides.forEach(function (s, i) {
-      s.classList.toggle('active', i === current);
+  if (carBtnPrev && carTrack) {
+    carBtnPrev.addEventListener('click', function() {
+      carTrack.scrollBy({ left: -340, behavior: 'smooth' });
     });
-    dots.forEach(function (d, i) {
-      d.classList.toggle('active', i === current);
+  }
+  if (carBtnNext && carTrack) {
+    carBtnNext.addEventListener('click', function() {
+      carTrack.scrollBy({ left: 340, behavior: 'smooth' });
     });
   }
 
-  function startSliderTimer() {
-    if (reduceMotion || slides.length <= 1) return;
-    clearInterval(timer);
-    timer = setInterval(function () {
-      showSlide(current + 1);
-    }, 5500);
-  }
-
-  if (slides.length > 1) {
-    if (prevBtn) {
-      prevBtn.addEventListener('click', function () {
-        showSlide(current - 1);
-        startSliderTimer();
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', function () {
-        showSlide(current + 1);
-        startSliderTimer();
-      });
-    }
-    dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
-        showSlide(i);
-        startSliderTimer();
-      });
-    });
-    startSliderTimer();
-  }
-
-  // ---------- 8. Hero Arka Plan Videosu Yönetimi ----------
-  var heroVideo = document.getElementById('hero-bg-video');
-  var heroPlayToggle = document.getElementById('hero-play-toggle');
-  var heroMuteToggle = document.getElementById('hero-mute-toggle');
-  var heroSliderFallback = document.getElementById('hero-slider-fallback');
-
-  if (heroVideo) {
-    function handleHeroPlaying() {
-      heroVideo.classList.add('is-playing');
-      if (heroSliderFallback) heroSliderFallback.style.opacity = '0';
-    }
-    heroVideo.addEventListener('playing', handleHeroPlaying);
-    heroVideo.addEventListener('canplay', function () {
-      heroVideo.play().then(handleHeroPlaying).catch(function () {});
-    });
-    if (!heroVideo.paused || heroVideo.readyState >= 2) handleHeroPlaying();
-    heroVideo.addEventListener('error', function () { if (heroSliderFallback) heroSliderFallback.style.opacity = '1'; });
-
-    if (heroPlayToggle) {
-      heroPlayToggle.addEventListener('click', function () {
-        var isPaused = heroVideo.paused;
-        var iconPause = heroPlayToggle.querySelector('.icon-pause');
-        var iconPlay = heroPlayToggle.querySelector('.icon-play');
-        var label = heroPlayToggle.querySelector('.ctrl-label');
-        if (isPaused) {
-          heroVideo.play().catch(function(){});
-          if (iconPause) iconPause.style.display = 'block';
-          if (iconPlay) iconPlay.style.display = 'none';
-          if (label) label.textContent = currentLang === 'en' ? 'Pause' : 'Durdur';
-          heroPlayToggle.classList.remove('active');
-        } else {
-          heroVideo.pause();
-          if (iconPause) iconPause.style.display = 'none';
-          if (iconPlay) iconPlay.style.display = 'block';
-          if (label) label.textContent = currentLang === 'en' ? 'Play' : 'Oynat';
-          heroPlayToggle.classList.add('active');
-        }
-      });
-    }
-
-    if (heroMuteToggle) {
-      heroMuteToggle.addEventListener('click', function () {
-        var isMuted = heroVideo.muted;
-        var iconMuted = heroMuteToggle.querySelector('.icon-muted');
-        var iconUnmuted = heroMuteToggle.querySelector('.icon-unmuted');
-        var label = heroMuteToggle.querySelector('.ctrl-label');
-        if (isMuted) {
-          heroVideo.muted = false;
-          if (iconMuted) iconMuted.style.display = 'none';
-          if (iconUnmuted) iconUnmuted.style.display = 'block';
-          if (label) label.textContent = currentLang === 'en' ? 'Mute' : 'Sesi Kapat';
-          heroMuteToggle.classList.add('active');
-        } else {
-          heroVideo.muted = true;
-          if (iconMuted) iconMuted.style.display = 'block';
-          if (iconUnmuted) iconUnmuted.style.display = 'none';
-          if (label) label.textContent = currentLang === 'en' ? 'Unmute' : 'Ses Aç';
-          heroMuteToggle.classList.remove('active');
-        }
-      });
-    }
-  }
-
-  // ---------- 9. Video İnceleme Modalı ----------
-  var videoModal = document.getElementById('video-modal');
-  var videoPlayer = document.getElementById('modal-video-player');
-  var modalTitle = document.getElementById('modal-video-title');
-  var modalDesc = document.getElementById('modal-video-desc');
-  var modalClose = document.getElementById('video-modal-close');
-  var modalBackdrop = document.getElementById('video-modal-backdrop');
-
-  function openVideoModal(src, title, desc) {
-    if (!videoModal) return;
-    if (modalTitle && title) modalTitle.textContent = title;
-    if (modalDesc && desc) modalDesc.textContent = desc;
-
-    if (videoPlayer) {
-      videoPlayer.src = src;
-      videoPlayer.load();
-      videoPlayer.play().catch(function () {});
-    }
-
-    videoModal.classList.add('active');
-    videoModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeVideoModal() {
-    if (!videoModal) return;
-    videoModal.classList.remove('active');
-    videoModal.setAttribute('aria-hidden', 'true');
-    if (videoPlayer) {
-      videoPlayer.pause();
-      videoPlayer.src = '';
-    }
-    document.body.style.overflow = '';
-  }
-
-  if (modalClose) modalClose.addEventListener('click', closeVideoModal);
-  if (modalBackdrop) modalBackdrop.addEventListener('click', closeVideoModal);
-
-  document.querySelectorAll('.video-pill-badge').forEach(function (badge) {
-    badge.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var card = badge.closest('.car-card');
-      var title = card ? (card.querySelector('h3') ? card.querySelector('h3').textContent : 'Model Video İnceleme') : 'Model Video İnceleme';
-      openVideoModal('videos/showroom-video.mp4', title + ' · Video İnceleme', 'Messina Home usta işçiliği ve modüler konfor ayrıntıları.');
-    });
-  });
-
-  // ---------- 10. Kaydırınca Beliren Öğeler (IntersectionObserver) ----------
+  // ---------- Kaydırınca Beliren Öğeler (IntersectionObserver) ----------
   var revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length) {
-    if ('IntersectionObserver' in window && !reduceMotion) {
+    if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -632,87 +611,55 @@ document.addEventListener('DOMContentLoaded', function () {
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+      }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
       revealEls.forEach(function (el) { observer.observe(el); });
     } else {
       revealEls.forEach(function (el) { el.classList.add('in'); });
     }
   }
 
-  // ---------- 11. İletişim Formu -> WhatsApp Yönlendirmesi ----------
+  // ---------- İletişim Formu -> WhatsApp Yönlendirmesi ----------
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = document.getElementById('cf-name').value.trim();
-      var phone = document.getElementById('cf-phone').value.trim();
+      var phone = document.getElementById('cf-phone') ? document.getElementById('cf-phone').value.trim() : '';
       var message = document.getElementById('cf-message').value.trim();
 
       var text = currentLang === 'en'
         ? ('Hello Messina Home, my name is ' + name + '.' + (phone ? ' Phone: ' + phone + '.' : '') + (message ? ' Message: ' + message : ''))
         : ('Merhaba Messina Home, ben ' + name + '.' + (phone ? ' Telefon: ' + phone + '.' : '') + (message ? ' Mesajım: ' + message : ''));
 
-      var waNumber = '905050332457';
+      var waNumber = '905464379275';
       var url = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(text);
       window.open(url, '_blank');
     });
   }
 
-  // ---------- Sayfa Açılış Fade-In ----------
-  var reduceMotion = false;
-  try {
-    reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  } catch(e) {
-    reduceMotion = false;
-  }
-  document.body.classList.add('is-loaded');
+  // ---------- Hero Slider Otomatik Döngü ----------
+  var heroSlides = document.querySelectorAll('.hero-slide');
+  var heroCurrentIndex = 0;
+  var heroSlideTimer = null;
 
-
-  // ---------- Parallax Efekti ----------
-  var parallaxEls = document.querySelectorAll('[data-parallax]');
-  if (parallaxEls.length && !reduceMotion) {
-    var isTicking = false;
-    function updateParallax() {
-      var scrollY = window.pageYOffset || 0;
-      var windowH = window.innerHeight;
-      parallaxEls.forEach(function (el) {
-        var rect = el.getBoundingClientRect();
-        var elTop = rect.top + scrollY;
-        var elH = rect.height;
-        if (scrollY + windowH > elTop && scrollY < elTop + elH + windowH) {
-          var factor = parseFloat(el.getAttribute('data-parallax')) || 0.04;
-          var relY = (scrollY + windowH * 0.5) - (elTop + elH * 0.5);
-          el.style.transform = 'translate3d(0,' + (relY * factor).toFixed(1) + 'px,0)';
-        }
-      });
-      isTicking = false;
-    }
-    window.addEventListener('scroll', function () {
-      if (!isTicking) {
-        requestAnimationFrame(updateParallax);
-        isTicking = true;
-      }
-    }, { passive: true });
-    updateParallax();
-  }
-
-  // ---------- 3D Kart Tilt Efekti ----------
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
-    document.querySelectorAll('.car-card, .m-badge-item, .feature, .arch-card, .smart-card').forEach(function (card) {
-      card.classList.add('tilt-card');
-      card.addEventListener('mousemove', function (e) {
-        var rect = card.getBoundingClientRect();
-        var rotX = ((e.clientY - rect.top - rect.height / 2) / rect.height * 2) * -3;
-        var rotY = ((e.clientX - rect.left - rect.width / 2) / rect.width * 2) * 3;
-        card.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg) translateY(-4px)';
-      });
-      card.addEventListener('mouseleave', function () {
-        card.style.transform = '';
-      });
+  function showHeroSlide(index) {
+    if (!heroSlides.length) return;
+    heroCurrentIndex = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach(function (s, i) {
+      s.classList.toggle('active', i === heroCurrentIndex);
     });
   }
 
+  function startHeroSlideTimer() {
+    if (heroSlides.length <= 1) return;
+    clearInterval(heroSlideTimer);
+    heroSlideTimer = setInterval(function () {
+      showHeroSlide(heroCurrentIndex + 1);
+    }, 5500);
+  }
+
+  if (heroSlides.length > 1) {
+    startHeroSlideTimer();
+  }
+
 });
-
-
-
