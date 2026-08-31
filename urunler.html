@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=3.4">
+<link rel="stylesheet" href="css/style.css?v=3.5">
 </head>
 <body>
 
@@ -57,6 +57,12 @@
           <a href="#viyana" data-i18n="nav_model_viyana">Viyana Koltuk Takımı</a>
         </div>
       </li>
+      <li>
+        <a href="oda-planlayici.html" class="nav-diamond-link">
+          <span class="diamond-dot">&#9670;</span>
+          <span data-i18n="nav_planner">3D Oda Planlayıcı</span>
+        </a>
+      </li>
     </ul>
 
     <!-- Ortalanmış Messina Home Logosu -->
@@ -99,6 +105,7 @@
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-item"><span class="diamond-dot">&#9670;</span> <span data-i18n="nav_home">ANA SAYFA</span></a></li>
         <li><a href="urunler.html" class="mobile-nav-item"><span class="diamond-dot">&#9670;</span> <span data-i18n="nav_collection">KOLEKSİYON</span></a></li>
+        <li><a href="oda-planlayici.html" class="mobile-nav-item"><span class="diamond-dot">&#9670;</span> <span data-i18n="nav_planner">3D Oda Planlayıcı</span></a></li>
         <li><a href="hakkimizda.html" class="mobile-nav-item"><span class="diamond-dot">&#9670;</span> <span data-i18n="nav_about">HAKKIMIZDA</span></a></li>
         <li><a href="iletisim.html" class="mobile-nav-item"><span class="diamond-dot">&#9670;</span> <span data-i18n="nav_contact">İLETİŞİM</span></a></li>
       </ul>
@@ -449,6 +456,7 @@
       <h2 data-i18n="prod_custom_title">Evinize ve Zevkinize Özel Üretim</h2>
       <p style="max-width:540px;margin:0 auto 24px" data-i18n="prod_custom_lead">Tüm modellerimizde dilediğiniz renk, kumaş dokusu ve salonunuza uygun ölçü değişiklikleri yapılmaktadır.</p>
       <div class="btn-row">
+        <a href="oda-planlayici.html" class="btn btn--gold" data-i18n="promo_planner_btn">3D Oda Planlayıcıyı Dene</a>
         <a href="https://wa.me/905464379275" target="_blank" rel="noopener" class="btn btn--whatsapp" data-i18n="manifesto_btn_wa">WhatsApp Katalog & Fiyat</a>
         <a href="iletisim.html" class="btn btn--outline" data-i18n="btn_visit_workshop">Atölyemizi Ziyaret Edin</a>
       </div>
@@ -475,6 +483,7 @@
       <div>
         <h4 data-i18n="footer_quick_links">Koleksiyonlar</h4>
         <div class="footer-links">
+          <a href="oda-planlayici.html" data-i18n="nav_planner">3D Oda Planlayıcı</a>
           <a href="urunler.html#yildiz" data-i18n="nav_model_yildiz">Yıldız Koltuk Takımı</a>
           <a href="urunler.html#nirvana" data-i18n="nav_model_nirvana">Nirvana Koltuk Takımı</a>
           <a href="urunler.html#golf" data-i18n="nav_model_golf">Golf Koltuk Takımı</a>
@@ -559,7 +568,7 @@
 <div class="custom-cursor-dot" id="cursor-dot"></div>
 <div class="custom-cursor-ring" id="cursor-ring"></div>
 
-<script src="js/main.js?v=3.4"></script>
+<script src="js/main.js?v=3.5"></script>
 <script>
   function switchModelImg(modelKey, imgSrc, btnEl) {
     var mainImg = document.getElementById('main-img-' + modelKey);
