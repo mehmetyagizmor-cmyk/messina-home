@@ -413,6 +413,8 @@
 
   function setupPointerEvents() {
     var canvas = renderer.domElement;
+    var lastTapTime = 0;
+    var lastTapItem = null;
 
     canvas.addEventListener('pointerdown', function (e) {
       var hitItem = intersectFurniture(e);
@@ -442,9 +444,69 @@
       draggingItem = null;
       controls.enabled = true;
     });
+
+    // Çift tıklama ile 90° hızlı döndürme
+    canvas.addEventListener('dblclick', function (e) {
+      var hitItem = intersectFurniture(e);
+      if (hitItem) {
+        selectItem(hitItem.id);
+        rotateSelectedItem(90);
+      }
+    });
+
+    // Mobil / Dokunmatik ekran için çift dokunma (Double Tap) desteği
+    canvas.addEventListener('touchend', function (e) {
+      var now = Date.now();
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        var touch = e.changedTouches[0];
+        var fakeEvent = { clientX: touch.clientX, clientY: touch.clientY };
+        var hitItem = intersectFurniture(fakeEvent);
+        if (hitItem && hitItem === lastTapItem && (now - lastTapTime) < 350) {
+          selectItem(hitItem.id);
+          rotateSelectedItem(90);
+          lastTapTime = 0;
+          lastTapItem = null;
+          return;
+        }
+        lastTapTime = now;
+        lastTapItem = hitItem;
+      }
+    });
+
+    // Fare tekerleği (Wheel) ile koltuğu hassas döndürme
+    canvas.addEventListener('wheel', function (e) {
+      if (selectedItemId != null) {
+        var hit = intersectFurniture(e);
+        if (hit && hit.id === selectedItemId) {
+          e.preventDefault();
+          rotateSelectedItem(e.deltaY > 0 ? 15 : -15);
+        }
+      }
+    }, { passive: false });
+
+    // Klavye Kısayolları (R tuşu: 45° döndür, Shift+R: -45°, Sol/Sağ: 15°, Delete: Sil)
+    window.addEventListener('keydown', function (e) {
+      if (selectedItemId == null) return;
+      var activeTag = document.activeElement ? document.activeElement.tagName : '';
+      if (activeTag === 'INPUT' || activeTag === 'TEXTAREA') return;
+
+      if (e.key === 'r' || e.key === 'R') {
+        e.preventDefault();
+        rotateSelectedItem(e.shiftKey ? -45 : 45);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        rotateSelectedItem(-15);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        rotateSelectedItem(15);
+      } else if (e.key === 'Delete' || e.key === 'Backspace') {
+        e.preventDefault();
+        removeItem(selectedItemId);
+      }
+    });
   }
 
-  // ---------- Öğe Yönetimi ----------
+  // ---------- Öğe Yönetimi & Rotasyon Yardımcıları ----------
   function setItemPosition(item, xCm, zCm) {
     item.x = clamp(xCm, 0, room.Wcm);
     item.z = clamp(zCm, 0, room.Dcm);
@@ -458,12 +520,71 @@
     validateAll();
   }
 
+  function rotateSelectedItem(deltaDeg) {
+    if (selectedItemId == null) return;
+    var it = findItem(selectedItemId);
+    if (!it) return;
+    setItemRotation(it, it.rotationDeg + deltaDeg);
+    syncSelectedItemUI(it);
+  }
+
+  function setSelectedItemAngle(deg) {
+    if (selectedItemId == null) return;
+    var it = findItem(selectedItemId);
+    if (!it) return;
+    setItemRotation(it, deg);
+    syncSelectedItemUI(it);
+  }
+
+  function syncSelectedItemUI(it) {
+    if (!it) return;
+    if (it.dom && it.dom.inputR) {
+      it.dom.inputR.value = it.rotationDeg;
+      if (it.dom.refreshRotationLabel) it.dom.refreshRotationLabel();
+    }
+    if (it.dom && it.dom.card) {
+      it.dom.card.querySelectorAll('.planner-rotate-quick-btn').forEach(function (qb) {
+        var bAngle = parseInt(qb.getAttribute('data-angle'), 10);
+        if (!isNaN(bAngle)) {
+          qb.classList.toggle('is-active', Math.round(it.rotationDeg) === bAngle);
+        }
+      });
+    }
+    updateFloatingActions();
+  }
+
+  function updateFloatingActions() {
+    var floatBar = document.getElementById('planner-floating-actions');
+    if (!floatBar) return;
+    if (selectedItemId == null) {
+      floatBar.classList.remove('is-visible');
+      return;
+    }
+    var it = findItem(selectedItemId);
+    if (!it) {
+      floatBar.classList.remove('is-visible');
+      return;
+    }
+    floatBar.classList.add('is-visible');
+    var nameEl = document.getElementById('planner-float-name');
+    var angleEl = document.getElementById('planner-float-angle');
+    if (nameEl) nameEl.textContent = it.modelName + ' ' + labelForPiece(it.pieceId);
+    if (angleEl) angleEl.textContent = Math.round(it.rotationDeg) + '°';
+
+    var currentAngle = Math.round(it.rotationDeg);
+    floatBar.querySelectorAll('.planner-angle-btn').forEach(function (btn) {
+      var btnAngle = parseInt(btn.getAttribute('data-angle'), 10);
+      btn.classList.toggle('is-active', btnAngle === currentAngle);
+    });
+  }
+
   function selectItem(id) {
     selectedItemId = id;
     if (boxHelper) { scene.remove(boxHelper); boxHelper = null; }
     var it = id != null ? findItem(id) : null;
     if (it) { boxHelper = new THREE.BoxHelper(it.group, 0xdfc394); scene.add(boxHelper); }
     items.forEach(updateItemBadge);
+    updateFloatingActions();
   }
 
   function updateEmptyHint() {
@@ -645,6 +766,7 @@
       inputR.addEventListener('input', function () {
         setItemRotation(item, parseFloat(inputR.value) || 0);
         refreshRotationLabel();
+        updateFloatingActions();
       });
       var rot90 = document.createElement('button');
       rot90.type = 'button';
@@ -655,8 +777,42 @@
         setItemRotation(item, (item.rotationDeg + 90) % 360);
         inputR.value = item.rotationDeg;
         refreshRotationLabel();
+        updateFloatingActions();
       });
       rowR.appendChild(labelR); rowR.appendChild(inputR); rowR.appendChild(rot90);
+
+      // Yan panel için hızlı açı butonları
+      var quickRow = document.createElement('div');
+      quickRow.className = 'planner-rotate-quick-row';
+      [
+        { label: '⟲ -45°', delta: -45 },
+        { label: '⟳ +45°', delta: 45 },
+        { label: '0°', angle: 0 },
+        { label: '90°', angle: 90 },
+        { label: '180°', angle: 180 },
+        { label: '270°', angle: 270 }
+      ].forEach(function (opt) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'planner-rotate-quick-btn';
+        b.textContent = opt.label;
+        if (opt.angle != null) {
+          b.setAttribute('data-angle', opt.angle);
+          b.classList.toggle('is-active', Math.round(item.rotationDeg) === opt.angle);
+        }
+        b.addEventListener('click', function () {
+          if (opt.delta != null) {
+            setItemRotation(item, item.rotationDeg + opt.delta);
+          } else {
+            setItemRotation(item, opt.angle);
+          }
+          inputR.value = item.rotationDeg;
+          refreshRotationLabel();
+          syncSelectedItemUI(item);
+        });
+        quickRow.appendChild(b);
+      });
+      rowR.appendChild(quickRow);
 
       controlsWrap.appendChild(rowX); controlsWrap.appendChild(rowZ); controlsWrap.appendChild(rowR);
 
@@ -674,7 +830,7 @@
       });
 
       listEl.appendChild(card);
-      item.dom = { card: card, status: status, inputX: inputX, inputZ: inputZ };
+      item.dom = { card: card, status: status, inputX: inputX, inputZ: inputZ, inputR: inputR, refreshRotationLabel: refreshRotationLabel };
       updateItemBadge(item);
     });
   }
@@ -765,12 +921,33 @@
     var clearBtn = document.getElementById('clear-scene-btn');
     if (clearBtn) clearBtn.addEventListener('click', clearScene);
 
+    // Yüzen rotasyon kontrol çubuğu butonları
+    var rotCcwBtn = document.getElementById('planner-float-rot-ccw');
+    var rotCwBtn = document.getElementById('planner-float-rot-cw');
+    var rot90Btn = document.getElementById('planner-float-rot-90');
+    var rot180Btn = document.getElementById('planner-float-rot-180');
+    var floatDelBtn = document.getElementById('planner-float-delete');
+
+    if (rotCcwBtn) rotCcwBtn.addEventListener('click', function () { rotateSelectedItem(-45); });
+    if (rotCwBtn) rotCwBtn.addEventListener('click', function () { rotateSelectedItem(45); });
+    if (rot90Btn) rot90Btn.addEventListener('click', function () { rotateSelectedItem(90); });
+    if (rot180Btn) rot180Btn.addEventListener('click', function () { rotateSelectedItem(180); });
+    if (floatDelBtn) floatDelBtn.addEventListener('click', function () { if (selectedItemId != null) removeItem(selectedItemId); });
+
+    document.querySelectorAll('#planner-floating-actions .planner-angle-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var angle = parseFloat(btn.getAttribute('data-angle')) || 0;
+        setSelectedItemAngle(angle);
+      });
+    });
+
     // Dil değişiminde dinamik olarak üretilen metinleri yenile
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         renderModelCards();
         if (roomBuiltOnce) { renderItemsList(); renderRoomSummary(); }
         setBuildBtnLabel();
+        updateFloatingActions();
       });
     });
   });

@@ -157,7 +157,7 @@ var translations = {
     planner_status_overlap: "Başka bir ürünle çakışıyor",
     planner_area_total: "Toplam Alan",
     planner_area_used: "Yerleşen Ürün Alanı",
-    planner_drag_hint: "İpucu: Ürünleri fare veya parmağınızla sürükleyerek taşıyabilir, kaydırıcıyla döndürebilirsiniz.",
+    planner_drag_hint: "İpucu: Koltuğu sürükleyerek taşıyabilirsiniz. Döndürmek için üzerine çift tıklayın, klavyeden R / yön tuşlarını veya alttaki kontrol çubuğunu kullanın.",
     planner_disclaimer: "Not: Bu görselleştirme, ürünlerin gerçek santimetre ölçülerine göre ölçeklendirilmiş temsili bir 3D modelidir; nihai görünüm kumaş, renk ve detaylara göre değişiklik gösterebilir.",
     planner_cta_eyebrow: "Beğendiniz mi?",
     planner_cta_title: "Planınızı Bizimle Paylaşın",
@@ -368,7 +368,7 @@ var translations = {
     planner_status_overlap: "Overlaps another item",
     planner_area_total: "Total Area",
     planner_area_used: "Furniture Footprint",
-    planner_drag_hint: "Tip: drag items with your mouse or finger to move them, and use the slider to rotate.",
+    planner_drag_hint: "Tip: Drag items to move them. To rotate, double-click on an item, use the R / arrow keys, or use the controls below.",
     planner_disclaimer: "Note: this visualization is a representative 3D model scaled to the products' real centimeter dimensions; the final look may vary by fabric, color and detail.",
     planner_cta_eyebrow: "Like What You See?",
     planner_cta_title: "Share Your Plan With Us",
@@ -687,8 +687,9 @@ document.addEventListener('DOMContentLoaded', function () {
       closeSearch();
       if (drawer) drawer.classList.remove('open');
       var lightbox = document.getElementById('image-lightbox-modal');
-      if (lightbox && lightbox.classList.contains('active')) {
-        lightbox.classList.remove('active');
+      if (lightbox && (lightbox.classList.contains('active') || lightbox.classList.contains('is-open'))) {
+        lightbox.classList.remove('active', 'is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
       }
     }

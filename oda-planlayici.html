@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=3.5">
+<link rel="stylesheet" href="css/style.css?v=3.6">
 </head>
 <body>
 
@@ -239,8 +239,44 @@
               <div class="planner-canvas-hint" id="planner-empty-hint">
                 <span data-i18n="planner_empty_scene">Henüz ürün eklemediniz. Yukarıdan bir model seçip sahneye ekleyin.</span>
               </div>
+
+              <!-- SEÇİLİ KOLTUK YÜZEN HIZLI KONTROL ÇUBUĞU -->
+              <div class="planner-floating-actions" id="planner-floating-actions" aria-label="Koltuk Döndürme ve Kontrol Çubuğu">
+                <div class="planner-float-info">
+                  <span class="planner-float-title" id="planner-float-name">Koltuk</span>
+                  <span class="planner-float-angle" id="planner-float-angle">0°</span>
+                </div>
+                <button type="button" class="planner-float-btn" id="planner-float-rot-ccw" title="Sola 45° Döndür (Kısayol: Shift+R veya ←)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                  <span>-45°</span>
+                </button>
+                <button type="button" class="planner-float-btn" id="planner-float-rot-cw" title="Sağa 45° Döndür (Kısayol: R veya →)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+                  <span>+45°</span>
+                </button>
+                <button type="button" class="planner-float-btn" id="planner-float-rot-90" title="90° Dik Çevir (Kısayol: Çift Tıklama)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+                  <span>⟳ 90°</span>
+                </button>
+                <button type="button" class="planner-float-btn" id="planner-float-rot-180" title="180° Ters Çevir">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+                  <span>180°</span>
+                </button>
+                <div class="planner-float-divider"></div>
+                <div class="planner-angle-preset-group" title="Duvara Yaslama / Yön Açıları">
+                  <button type="button" class="planner-angle-btn" data-angle="0">0°</button>
+                  <button type="button" class="planner-angle-btn" data-angle="90">90°</button>
+                  <button type="button" class="planner-angle-btn" data-angle="180">180°</button>
+                  <button type="button" class="planner-angle-btn" data-angle="270">270°</button>
+                </div>
+                <div class="planner-float-divider"></div>
+                <button type="button" class="planner-float-btn planner-float-btn--danger" id="planner-float-delete" title="Seçili Koltuğu Sahneden Kaldır (Kısayol: Delete)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+                  <span>Sil</span>
+                </button>
+              </div>
             </div>
-            <p class="planner-drag-hint" data-i18n="planner_drag_hint">İpucu: Ürünleri fare veya parmağınızla sürükleyerek taşıyabilir, kaydırıcıyla döndürebilirsiniz.</p>
+            <p class="planner-drag-hint" data-i18n="planner_drag_hint">İpucu: Koltuğu sürükleyerek taşıyabilirsiniz. Döndürmek için üzerine çift tıklayın, klavyeden R / yön tuşlarını veya alttaki kontrol çubuğunu kullanın.</p>
           </div>
 
           <!-- YAN PANEL: YERLEŞTİRİLEN ÜRÜNLER -->
@@ -352,9 +388,9 @@
 <div class="custom-cursor-dot" id="cursor-dot"></div>
 <div class="custom-cursor-ring" id="cursor-ring"></div>
 
-<script src="js/main.js?v=3.5"></script>
+<script src="js/main.js?v=3.6"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="js/room-planner.js?v=1.0"></script>
+<script src="js/room-planner.js?v=1.1"></script>
 </body>
 </html>
