@@ -6,17 +6,17 @@
 var translations = {
   tr: {
     // Üst Çubuk & Arama
-    top_search: "ARA",
+    top_search: "Ara",
     top_stores: "ATÖLYEMİZ",
     search_placeholder: "Model, kumaş veya renk arayın... (Örn: Yıldız, Nirvana, Versace, Golf, Viyana)",
     search_popular: "Popüler Modeller:",
     search_no_res: "Sonuç bulunamadı. Lütfen model adı veya kategori deneyin.",
 
     // Navigasyon
-    nav_home: "ANA SAYFA",
-    nav_collection: "KOLEKSİYON",
-    nav_about: "HAKKIMIZDA",
-    nav_contact: "İLETİŞİM",
+    nav_home: "Ana Sayfa",
+    nav_collection: "Koleksiyon",
+    nav_about: "Hakkımızda",
+    nav_contact: "İletişim",
     nav_model_yildiz: "Yıldız Koltuk Takımı",
     nav_model_nirvana: "Nirvana Koltuk Takımı",
     nav_model_golf: "Golf Koltuk Takımı",
@@ -217,17 +217,17 @@ var translations = {
   },
   en: {
     // Top Bar & Search
-    top_search: "SEARCH",
+    top_search: "Search",
     top_stores: "OUR WORKSHOP",
     search_placeholder: "Search for models, fabrics or colors... (e.g. Yildiz, Nirvana, Versace, Golf, Viyana)",
     search_popular: "Popular Models:",
     search_no_res: "No results found. Please try another model name.",
 
     // Navigation
-    nav_home: "HOME",
-    nav_collection: "COLLECTION",
-    nav_about: "ABOUT US",
-    nav_contact: "CONTACT",
+    nav_home: "Home",
+    nav_collection: "Collection",
+    nav_about: "About Us",
+    nav_contact: "Contact",
     nav_model_yildiz: "Yildiz Sofa Set",
     nav_model_nirvana: "Nirvana Sofa Set",
     nav_model_golf: "Golf Sofa Set",
@@ -439,7 +439,7 @@ var searchableItems = [
     category_tr: "Koltuk Takımı",
     category_en: "Sofa Set",
     url: "urunler.html#yildiz",
-    img: "images/models/yildiz-1.jpg",
+    img: "images/catalog/yildiz-1-480.webp",
     tags: ["yıldız", "yildiz", "koltuk takımı", "yataklı", "ahşap", "sofa set", "3lü", "berjer"]
   },
   {
@@ -451,7 +451,7 @@ var searchableItems = [
     category_tr: "Koltuk Takımı",
     category_en: "Sofa Set",
     url: "urunler.html#nirvana",
-    img: "images/models/nirvana-1.jpg",
+    img: "images/catalog/nirvana-1-480.webp",
     tags: ["nirvana", "kapitone", "chester", "nubuk", "koltuk takımı", "taba", "hardal", "sofa"]
   },
   {
@@ -463,7 +463,7 @@ var searchableItems = [
     category_tr: "Koltuk Takımı",
     category_en: "Sofa Set",
     url: "urunler.html#golf",
-    img: "images/models/golf-1.jpg",
+    img: "images/catalog/golf-1-480.webp",
     tags: ["golf", "kiremit", "vizon", "koltuk", "berjer", "yüksek sırt", "sofa"]
   },
   {
@@ -475,7 +475,7 @@ var searchableItems = [
     category_tr: "Koltuk Takımı",
     category_en: "Sofa Set",
     url: "urunler.html#versace",
-    img: "images/models/versace-1.jpg",
+    img: "images/catalog/versace-1-480.webp",
     tags: ["versace", "gold", "altın", "mürdüm", "kadife", "koltuk takımı", "lüks"]
   },
   {
@@ -487,7 +487,7 @@ var searchableItems = [
     category_tr: "Koltuk Takımı",
     category_en: "Sofa Set",
     url: "urunler.html#viyana",
-    img: "images/models/viyana-1.jpg",
+    img: "images/catalog/viyana-1-480.webp",
     tags: ["viyana", "vienna", "siyah", "krem", "gold", "koltuk takımı", "tasarım berjer"]
   },
   {
@@ -499,7 +499,7 @@ var searchableItems = [
     category_tr: "Araç",
     category_en: "Tool",
     url: "oda-planlayici.html",
-    img: "images/cat-kanepe.jpg",
+    img: "images/catalog/yildiz-2-480.webp",
     tags: ["3d", "oda planlayıcı", "room planner", "ölçü", "simülasyon", "yerleşim", "planlama"]
   }
 ];

@@ -1,0 +1,12 @@
+{
+  "name": "messina-home-tools",
+  "private": true,
+  "description": "Messina Home statik site araclari: gorsel optimizasyonu ve HTML sayfa uretimi",
+  "scripts": {
+    "images": "node optimize-images.js",
+    "build": "node build-site.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
